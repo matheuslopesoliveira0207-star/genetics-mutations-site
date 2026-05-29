@@ -6,13 +6,15 @@ export default function Home() {
   const [currentState, setCurrentState] = useState<string>("nativo");
   const [quizAnswer, setQuizAnswer] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [comparisonMode, setComparisonMode] = useState(false);
 
   // Aplicar classe ao body para mudar o estado visual
   useEffect(() => {
-    document.body.className = `estado-${currentState}`;
+    const displayState = comparisonMode ? "nativo" : currentState;
+    document.body.className = `estado-${displayState}`;
     setQuizAnswer(null);
     setShowFeedback(false);
-  }, [currentState]);
+  }, [currentState, comparisonMode]);
 
   // Função para selecionar mutação aleatória
   const handleChaosButton = () => {
@@ -26,7 +28,8 @@ export default function Home() {
     setShowFeedback(true);
   };
 
-  const mutation = mutations[currentState];
+  const displayState = comparisonMode ? "nativo" : currentState;
+  const mutation = mutations[displayState];
   const selectedOption =
     quizAnswer !== null ? mutation.quizOptions[quizAnswer] : null;
   const isCorrect = selectedOption?.correct ?? false;
@@ -48,6 +51,16 @@ export default function Home() {
         </Button>
 
         <div className="border-t border-current my-3 opacity-30"></div>
+
+        {currentState !== "nativo" && (
+          <Button
+            onClick={() => setComparisonMode(!comparisonMode)}
+            className="comparison-button mb-4 w-full"
+            variant="outline"
+          >
+            {comparisonMode ? "🔄 Ver Mutação" : "🔍 Comparar com Normal"}
+          </Button>
+        )}
 
         <p className="text-xs font-semibold mb-2 opacity-70 hidden md:block">Seletores Manuais:</p>
 

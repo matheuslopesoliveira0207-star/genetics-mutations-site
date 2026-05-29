@@ -730,6 +730,67 @@
     }
   }
   
+  .comparison-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid var(--accent);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-size: 0.875rem;
+  }
+  
+  .comparison-button:hover {
+    background: var(--accent);
+    color: var(--background);
+    transform: scale(1.05);
+  }
+  
+  body.estado-falciforme .comparison-button {
+    border-color: #ff6666;
+    color: #ff6666;
+  }
+  
+  body.estado-falciforme .comparison-button:hover {
+    background: #ff6666;
+    color: #ffffff;
+  }
+  
+  body.estado-imperfeita .comparison-button {
+    border-color: #1a3a0a;
+    color: #1a3a0a;
+  }
+  
+  body.estado-imperfeita .comparison-button:hover {
+    background: #1a3a0a;
+    color: #ffffff;
+  }
+  
+  body.estado-down .comparison-button {
+    border-color: #d4a574;
+    color: #d4a574;
+  }
+  
+  body.estado-down .comparison-button:hover {
+    background: #d4a574;
+    color: #ffffff;
+  }
+  
+  body.estado-milano .comparison-button {
+    border-color: #ffd700;
+    color: #ffd700;
+  }
+  
+  body.estado-milano .comparison-button:hover {
+    background: #ffd700;
+    color: #0a0e1a;
+  }
+  
   .control-button {
     width: 100%;
     padding: 0.75rem 1rem;
