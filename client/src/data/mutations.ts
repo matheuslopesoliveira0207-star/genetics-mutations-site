@@ -115,6 +115,31 @@ export const mutations: Record<string, MutationState> = {
       },
     ],
   },
+  down: {
+    id: "down",
+    name: "Síndrome de Down",
+    label: "Sobrecarga Enzimática",
+    section1Title: "Alteração Cromossômica - Trissomia do 21",
+    section1Content:
+      "Alteração Cromossômica: Trissomia do Cromossomo 21. Em vez de uma mutação pontual, ocorre um fenômeno de desequilíbrio de dosagem gênica, onde a presença de uma terceira cópia do cromossomo decola a superexpressão de dezenas de proteínas e enzimas.",
+    section2Title: "Quebra do Equilíbrio Redox",
+    section2Content:
+      "O cromossomo 21 abriga o gene da enzima SOD1 (Superóxido Dismutase 1). Com 50% mais enzima SOD1 ativa, ocorre uma superprodução de peróxido de hidrogênio (H₂O₂). Isso sobrecarrega as enzimas Catalase e Glutationa Peroxidase, gerando estresse oxidativo severo que danifica lipídios de membrana e desnatura proteínas celulares.",
+    imageUrl:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-down-pt-MPVoj6bY9bWbhR6LDPA5zE.webp",
+    quizQuestion:
+      "Na Síndrome de Down, por que a superexpressão da enzima SOD1 causa danos celulares se a função dela é proteger a célula?",
+    quizOptions: [
+      {
+        text: "Porque ela passa a atacar o DNA diretamente.",
+        correct: false,
+      },
+      {
+        text: "Porque ela quebra o equilíbrio estequiométrico da via antioxidante, gerando um acúmulo de peróxido de hidrogênio que a célula não consegue neutralizar a tempo.",
+        correct: true,
+      },
+    ],
+  },
 };
 
-export const mutationOrder = ["nativo", "falciforme", "imperfeita", "milano"];
+export const mutationOrder = ["nativo", "falciforme", "imperfeita", "milano", "down"];

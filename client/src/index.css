@@ -404,6 +404,103 @@
     50% { transform: translateY(-8px) rotate(1deg); }
   }
   
+  /* Estado Síndrome de Down (Sobrecarga Enzimática) */
+  body.estado-down {
+    --background: #f5f0e8;
+    --foreground: #3d3d3d;
+    --card: #fffbf0;
+    --card-foreground: #3d3d3d;
+    --accent: #d4a574;
+    background: linear-gradient(135deg, #f5f0e8 0%, #ffe8cc 50%, #f5f0e8 100%);
+    filter: blur(0.8px);
+  }
+  
+  body.estado-down .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+    opacity: 0.92;
+    animation: down-stress 4s ease-in-out infinite;
+  }
+  
+  @keyframes down-stress {
+    0%, 100% { transform: scale(1) translateY(0); opacity: 0.92; }
+    50% { transform: scale(1.02) translateY(-2px); opacity: 0.88; }
+  }
+  
+  body.estado-down .section-card {
+    background: #fffbf0;
+    border-color: #d4a574;
+    animation: down-multiply 3s ease-in-out infinite;
+    opacity: 0.85;
+  }
+  
+  @keyframes down-multiply {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+    50% { transform: scale(0.98) rotate(-1deg); opacity: 0.75; }
+  }
+  
+  body.estado-down .section-card:nth-child(1) {
+    grid-column: span 2;
+  }
+  
+  body.estado-down .section-card:nth-child(2) {
+    grid-column: span 2;
+    animation-delay: 0.3s;
+  }
+  
+  body.estado-down .section-card:nth-child(3) {
+    grid-column: span 2;
+    animation-delay: 0.6s;
+  }
+  
+  @media (max-width: 1024px) {
+    body.estado-down .main-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.2rem;
+      padding: 2.5rem 1.5rem;
+    }
+    
+    body.estado-down .section-card {
+      grid-column: span 1 !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body.estado-down .main-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 2rem 1rem 52vh 1rem;
+    }
+  }
+  
+  /* Estilos do Painel de Controle para Down */
+  body.estado-down .control-panel {
+    background: rgba(212, 165, 116, 0.1);
+    border-color: #d4a574;
+  }
+  
+  body.estado-down .chaos-button {
+    background: linear-gradient(135deg, #d4a574 0%, #c9935e 100%);
+    color: white;
+    border-color: #a67c4a;
+  }
+  
+  body.estado-down .chaos-button:hover {
+    background: linear-gradient(135deg, #c9935e 0%, #b88a50 100%);
+  }
+  
+  body.estado-down .selector-button {
+    border-color: #d4a574;
+    color: #3d3d3d;
+  }
+  
+  body.estado-down .selector-button.active {
+    background: #d4a574;
+    color: white;
+  }
+  
   /* Cards de Seção */
   .section-card {
     background: var(--card);
