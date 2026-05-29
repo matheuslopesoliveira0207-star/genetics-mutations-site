@@ -225,6 +225,8 @@
     transform: translateY(0) rotate(0deg) skewY(0deg);
     opacity: 1;
     margin: 0;
+    background: #f5f9ff;
+    border-color: #0066cc;
   }
   
   /* Estado Falciforme (Compressão/Congestão) */
@@ -238,31 +240,54 @@
   }
   
   body.estado-falciforme .main-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem 0.5rem;
-    transform: scaleX(0.85) scaleY(1.1);
-    opacity: 0.95;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    transform: scaleX(0.95) scaleY(1.02);
+    opacity: 0.98;
+  }
+  
+  @media (max-width: 1024px) {
+    body.estado-falciforme .main-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      padding: 1.5rem 0.75rem;
+    }
   }
   
   @media (max-width: 768px) {
     body.estado-falciforme .main-container {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
       padding: 1rem 0.5rem 52vh 0.5rem;
-      transform: scaleX(0.95) scaleY(1.05);
+      transform: scaleX(1) scaleY(1);
     }
   }
   
+  @keyframes falciforme-pulse {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-2px) rotate(0deg); }
+  }
+  
   body.estado-falciforme .section-card {
-    transform: translateY(0) rotate(0deg) skewY(2deg);
-    opacity: 0.9;
-    margin: -0.5rem 0;
+    background: #2a0a0a;
+    border-color: #8B0000;
     animation: falciforme-pulse 2s ease-in-out infinite;
   }
   
-  @keyframes falciforme-pulse {
-    0%, 100% { transform: translateY(0) rotate(0deg) skewY(2deg); }
-    50% { transform: translateY(-2px) rotate(0.5deg) skewY(2deg); }
+  body.estado-falciforme .section-card:nth-child(1) {
+    transform: rotate(-1deg);
+  }
+  
+  body.estado-falciforme .section-card:nth-child(2) {
+    transform: rotate(1deg);
+    animation-delay: 0.3s;
+  }
+  
+  body.estado-falciforme .section-card:nth-child(3) {
+    transform: rotate(-0.5deg);
+    animation-delay: 0.6s;
   }
   
   /* Estado Osteogênese Imperfeita (Fratura do Grid) */
@@ -304,14 +329,16 @@
   body.estado-imperfeita .section-card {
     transform: rotate(3deg) skewY(-4deg) skewX(2deg);
     opacity: 1;
-    margin: 0;
-    border: 2px solid var(--accent);
-    border-radius: 0;
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    background: #f0f0e8;
+    border-color: #1a3a0a;
+  }
+  
+  body.estado-imperfeita .section-card:nth-child(1) {
+    transform: rotate(2deg) skewY(-2deg) skewX(1deg);
   }
   
   body.estado-imperfeita .section-card:nth-child(2) {
-    transform: rotate(-2deg) skewY(3deg) skewX(-1deg);
+    transform: rotate(3deg) skewY(-4deg) skewX(2deg);
   }
   
   body.estado-imperfeita .section-card:nth-child(3) {
@@ -360,6 +387,8 @@
     opacity: 1;
     margin: 0;
     animation: milano-float 3s ease-in-out infinite;
+    background: #151a2e;
+    border-color: #ffd700;
   }
   
   body.estado-milano .section-card:nth-child(2) {

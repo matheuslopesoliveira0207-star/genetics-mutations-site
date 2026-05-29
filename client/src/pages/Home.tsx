@@ -73,11 +73,22 @@ export default function Home() {
 
           {/* Imagem da Proteína */}
           <div className="mb-3 md:mb-4 rounded-lg overflow-hidden">
-            <img
-              src={mutation.imageUrl}
-              alt={mutation.name}
-              className="w-full h-auto object-cover rounded-lg transition-all duration-700"
-            />
+            <figure>
+              <img
+                src={mutation.imageUrl}
+                alt={mutation.name}
+                className="w-full h-auto object-cover rounded-lg transition-all duration-700"
+              />
+              <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">
+                {currentState === "nativo"
+                  ? "Hemoglobina Nativa em Homeostase"
+                  : currentState === "falciforme"
+                    ? "Hemoglobinas Polimerizadas em Anemia Falciforme"
+                    : currentState === "imperfeita"
+                      ? "Colágeno Defeituoso em Osteogênese Imperfeita"
+                      : "Partícula HDL ApoA-1 Milano Otimizada"}
+              </figcaption>
+            </figure>
           </div>
 
           {/* Visualização de Sequência */}
