@@ -123,29 +123,29 @@ export const mutations: Record<string, MutationState> = {
     label: "Sobrecarga Enzimática",
     section1Title: "Alteração Cromossômica - Trissomia do 21",
     section1Content:
-      "Alteração Cromossômica: Trissomia do Cromossomo 21. Em vez de uma mutação pontual, ocorre um fenômeno de desequilíbrio de dosagem gênica, onde a presença de uma terceira cópia do cromossomo decola a superexpressão de dezenas de proteínas e enzimas.",
-    section2Title: "Quebra do Equilíbrio Redox",
+      "Alteração Cromossômica: Trissomia do Cromossomo 21. Em vez de uma mutação pontual em um único gene, ocorre um desequilíbrio de DOSAGEM GÊNICA massivo. A presença de uma terceira cópia do cromossomo 21 causa superexpressão de ~300 genes simultaneamente. O cromossomo 21 abriga o gene da SOD1 (Superóxido Dismutase 1), uma enzima antioxidante crítica. Com 50% mais cópias do gene, a célula produz 50% mais SOD1. Isso quebra o equilíbrio redox celular, gerando uma cascata de estresse oxidativo que danifica DNA, proteínas e lipídios de membrana.",
+    section2Title: "A Cascata de Dano Oxidativo - Quebra da Matriz",
     section2Content:
-      "O cromossomo 21 abriga o gene da enzima SOD1 (Superóxido Dismutase 1). Com 50% mais enzima SOD1 ativa, ocorre uma superprodução de peróxido de hidrogênio (H₂O₂). Isso sobrecarrega as enzimas Catalase e Glutationa Peroxidase, gerando estresse oxidativo severo que danifica lipídios de membrana e desnatura proteínas celulares.",
+      "SOD1 catalisa: O₂·⁻ + H⁺ + e⁻ → H₂O₂. Com 50% mais SOD1, há SUPERPRODUÇÃO de H₂O₂. As enzimas Catalase (CAT) e Glutationa Peroxidase (GPx) não conseguem neutralizar H₂O₂ rápido o suficiente. O H₂O₂ acumula e reage com Fe²⁺ (reação de Fenton), gerando radicais hidroxila (OH·) extremamente reativos. Esses radicais atacam: (1) Lipídios de membrana → peroxidação lipídica; (2) Proteínas → oxidação de aminoácidos; (3) DNA → quebras de fita dupla. Resultado: morte celular, inflamação crônica e disfunção neural.",
     imageUrl:
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-down-pt-MPVoj6bY9bWbhR6LDPA5zE.webp",
     quizQuestion:
-      "Na Síndrome de Down, por que a superexpressão da enzima SOD1 causa danos celulares se a função dela é proteger a célula?",
+      "Na Síndrome de Down, qual é a sequência de eventos que leva ao dano celular severo?",
     quizOptions: [
       {
-        text: "Porque ela passa a atacar o DNA diretamente.",
-        correct: false,
-      },
-      {
-        text: "Porque ela quebra o equilíbrio estequiométrico da via antioxidante, gerando um acúmulo de peróxido de hidrogênio que a célula não consegue neutralizar a tempo.",
+        text: "Trissomia 21 → +50% SOD1 → Superprodução de H₂O₂ → Reação de Fenton → Radicais OH· → Dano a lipídios, proteínas e DNA.",
         correct: true,
       },
+      {
+        text: "Trissomia 21 → Redução de SOD1 → Acúmulo de superóxido → Morte celular direta.",
+        correct: false,
+      },
     ],
-    comparisonExplanation: "Mudanca: Trissomia do 21 (3 copias). Consequencia: +50% SOD1, acumulo de H2O2, estresse oxidativo severo, danos celulares.",
+    comparisonExplanation: "Mudança: Trissomia do 21 (3 cópias). Consequência: +50% SOD1, acúmulo de H₂O₂, estresse oxidativo severo, danos celulares.",
   },
 };
 
 export const mutationOrder = ["nativo", "falciforme", "imperfeita", "down", "milano"];
 
-mutations.imperfeita.comparisonExplanation = "Mudanca: Glicina (pequena) -> Cys/Trp (volumosos). Consequencia: Helice triplice quebrada, colageno fragil, ossos quebradicos.";
-mutations.milano.comparisonExplanation = "Mudanca: Arg173Cys (ponte de dissulfeto). Consequencia: Dimero ultra-estavel, eficiencia aumentada, protecao cardiovascular.";
+mutations.imperfeita.comparisonExplanation = "Mudança: Glicina (pequena) → Cys/Trp (volumosos). Consequência: Hélice tríplice quebrada, colágeno frágil, ossos quebradiços.";
+mutations.milano.comparisonExplanation = "Mudança: Arg173Cys (ponte de dissulfeto). Consequência: Dímero ultra-estável, eficiência aumentada, proteção cardiovascular.";

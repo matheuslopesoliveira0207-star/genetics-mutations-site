@@ -515,7 +515,38 @@
     gap: 1.5rem;
     padding: 3rem 2rem;
     opacity: 0.92;
-    animation: down-stress 4s ease-in-out infinite;
+    animation: down-stress 4s ease-in-out infinite, matrix-break 3s ease-in-out infinite;
+    position: relative;
+  }
+  
+  body.estado-down .main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(45deg, transparent 48%, rgba(212, 165, 116, 0.1) 49%, rgba(212, 165, 116, 0.1) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, rgba(212, 165, 116, 0.1) 49%, rgba(212, 165, 116, 0.1) 51%, transparent 52%);
+    background-size: 60px 60px;
+    background-position: 0 0;
+    pointer-events: none;
+    z-index: 10;
+    animation: matrix-crack 2s ease-in-out infinite;
+    opacity: 0;
+  }
+  
+  @keyframes matrix-break {
+    0%, 100% { transform: perspective(1000px) rotateX(0deg) rotateY(0deg); }
+    25% { transform: perspective(1000px) rotateX(0.5deg) rotateY(-0.5deg); }
+    50% { transform: perspective(1000px) rotateX(-0.5deg) rotateY(0.5deg); }
+    75% { transform: perspective(1000px) rotateX(0.3deg) rotateY(-0.3deg); }
+  }
+  
+  @keyframes matrix-crack {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.15; }
   }
   
   @keyframes down-stress {
@@ -526,8 +557,36 @@
   body.estado-down .section-card {
     background: #fffbf0;
     border-color: #d4a574;
-    animation: down-multiply 3s ease-in-out infinite;
-    opacity: 0.85;
+    animation: down-pulse 2.5s ease-in-out infinite, card-fracture 3s ease-in-out infinite;
+    opacity: 0.9;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  body.estado-down .section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 165, 116, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 5;
+    animation: damage-spread 4s ease-in-out infinite;
+  }
+  
+  @keyframes card-fracture {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(0.2deg); }
+    50% { transform: scale(0.98) rotate(-0.2deg); }
+    75% { transform: scale(1.01) rotate(0.1deg); }
+  }
+  
+  @keyframes damage-spread {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
   }
   
   @keyframes down-multiply {
