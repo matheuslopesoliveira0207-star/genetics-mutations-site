@@ -53,13 +53,20 @@ export default function Home() {
         <div className="border-t border-current my-3 opacity-30"></div>
 
         {currentState !== "nativo" && (
-          <Button
-            onClick={() => setComparisonMode(!comparisonMode)}
-            className="comparison-button mb-4 w-full"
-            variant="outline"
-          >
-            {comparisonMode ? "🔄 Ver Mutação" : "🔍 Comparar com Normal"}
-          </Button>
+          <div className="comparison-section">
+            <Button
+              onClick={() => setComparisonMode(!comparisonMode)}
+              className="comparison-button mb-3 w-full"
+              variant="outline"
+            >
+              {comparisonMode ? "🔄 Ver Mutação" : "🔍 Comparar com Normal"}
+            </Button>
+            {mutations[currentState].comparisonExplanation && (
+              <p className="comparison-explanation text-xs leading-relaxed opacity-80 mb-4 p-2 rounded border-l-2 border-current">
+                {mutations[currentState].comparisonExplanation}
+              </p>
+            )}
+          </div>
         )}
 
         <p className="text-xs font-semibold mb-2 opacity-70 hidden md:block">Seletores Manuais:</p>

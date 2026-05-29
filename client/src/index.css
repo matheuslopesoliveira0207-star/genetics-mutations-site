@@ -791,6 +791,48 @@
     color: #0a0e1a;
   }
   
+  .comparison-section {
+    width: 100%;
+  }
+  
+  .comparison-explanation {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--foreground);
+    font-style: italic;
+    animation: fadeIn 0.4s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 0.8;
+      transform: translateY(0);
+    }
+  }
+  
+  body.estado-falciforme .comparison-explanation {
+    background: rgba(255, 102, 102, 0.1);
+    border-left-color: #ff6666 !important;
+  }
+  
+  body.estado-imperfeita .comparison-explanation {
+    background: rgba(26, 58, 10, 0.1);
+    border-left-color: #1a3a0a !important;
+  }
+  
+  body.estado-down .comparison-explanation {
+    background: rgba(212, 165, 116, 0.1);
+    border-left-color: #d4a574 !important;
+  }
+  
+  body.estado-milano .comparison-explanation {
+    background: rgba(255, 215, 0, 0.1);
+    border-left-color: #ffd700 !important;
+  }
+  
   .control-button {
     width: 100%;
     padding: 0.75rem 1rem;

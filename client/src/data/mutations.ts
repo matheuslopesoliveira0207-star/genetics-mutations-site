@@ -12,6 +12,7 @@ export interface MutationState {
     text: string;
     correct: boolean;
   }>;
+  comparisonExplanation?: string;
 }
 
 export const mutations: Record<string, MutationState> = {
@@ -64,6 +65,7 @@ export const mutations: Record<string, MutationState> = {
         correct: true,
       },
     ],
+    comparisonExplanation: "Mudança: Glutamato (polar, -) → Valina (apolar). Consequência: Agregação massiva, perda de solubilidade, deformação celular em foice.",
   },
   imperfeita: {
     id: "imperfeita",
@@ -139,7 +141,11 @@ export const mutations: Record<string, MutationState> = {
         correct: true,
       },
     ],
+    comparisonExplanation: "Mudanca: Trissomia do 21 (3 copias). Consequencia: +50% SOD1, acumulo de H2O2, estresse oxidativo severo, danos celulares.",
   },
 };
 
 export const mutationOrder = ["nativo", "falciforme", "imperfeita", "down", "milano"];
+
+mutations.imperfeita.comparisonExplanation = "Mudanca: Glicina (pequena) -> Cys/Trp (volumosos). Consequencia: Helice triplice quebrada, colageno fragil, ossos quebradicos.";
+mutations.milano.comparisonExplanation = "Mudanca: Arg173Cys (ponte de dissulfeto). Consequencia: Dimero ultra-estavel, eficiencia aumentada, protecao cardiovascular.";
