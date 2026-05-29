@@ -142,4 +142,4 @@ export const mutations: Record<string, MutationState> = {
   },
 };
 
-export const mutationOrder = ["nativo", "falciforme", "imperfeita", "milano", "down"];
+export const mutationOrder = ["nativo", "falciforme", "imperfeita", "down", "milano"];
