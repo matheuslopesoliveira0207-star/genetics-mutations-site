@@ -306,15 +306,17 @@ export default function Home() {
 
           {/* Dica Educativa */}
           <div className="mt-3 md:mt-4 p-2 md:p-3 bg-muted/30 rounded-md text-xs text-muted-foreground">
-            <strong>Conceito-chave:</strong> {
-              currentState === "nativo"
-                ? "O estado nativo é determinado pela minimização da energia livre de Gibbs."
-                : currentState === "falciforme"
-                  ? "O efeito hidrofóbico é a força motriz principal para agregação proteica."
-                  : currentState === "imperfeita"
-                    ? "O impedimento estérico destrói a geometria necessária para estabilidade estrutural."
-                    : "As ligações covalentes são muito mais estáveis que interações fracas."
-            }
+            <p>
+              <strong>Conceito-chave:</strong> {
+                currentState === "nativo"
+                  ? "O estado nativo é determinado pela minimização da energia livre de Gibbs."
+                  : currentState === "falciforme"
+                    ? "O efeito hidrofóbico é a força motriz principal para agregação proteica."
+                    : currentState === "imperfeita"
+                      ? "O impedimento estérico destrói a geometria necessária para estabilidade estrutural."
+                      : "As ligações covalentes são muito mais estáveis que interações fracas."
+              }
+            </p>
           </div>
         </div>
       </div>
