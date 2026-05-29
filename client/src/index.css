@@ -1226,3 +1226,213 @@
       font-size: 0.75rem;
     }
   }
+
+
+  /* Componente de Corrupção - Códigos de Erro */
+  .corruption-display-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .corruption-code-container {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 30, 0.9) 100%);
+    border: 2px solid;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    animation: corruption-flicker 3s ease-in-out infinite;
+  }
+  
+  body.estado-falciforme .corruption-code-container {
+    border-color: #ff6666;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.3) 0%, rgba(20, 10, 10, 0.9) 100%);
+  }
+  
+  body.estado-falciforme .corruption-code-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 102, 102, 0.1) 0px,
+      rgba(255, 102, 102, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    pointer-events: none;
+    animation: scan-lines 0.15s linear infinite;
+  }
+  
+  body.estado-imperfeita .corruption-code-container {
+    border-color: #1a3a0a;
+    background: linear-gradient(135deg, rgba(26, 58, 10, 0.3) 0%, rgba(10, 20, 10, 0.9) 100%);
+  }
+  
+  body.estado-imperfeita .corruption-code-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(26, 58, 10, 0.15) 0px,
+      rgba(26, 58, 10, 0.15) 3px,
+      transparent 3px,
+      transparent 6px
+    );
+    pointer-events: none;
+    animation: glitch-shift 0.2s ease-in-out infinite;
+  }
+  
+  body.estado-down .corruption-code-container {
+    border-color: #d4a574;
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.2) 0%, rgba(30, 20, 10, 0.9) 100%);
+  }
+  
+  body.estado-down .corruption-code-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(212, 165, 116, 0.1) 0px,
+      rgba(212, 165, 116, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    pointer-events: none;
+    animation: diagonal-shift 0.25s linear infinite;
+  }
+  
+  .corruption-code-display {
+    position: relative;
+    z-index: 10;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  
+  .corruption-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: line-fade-in 0.4s ease-out;
+  }
+  
+  @keyframes line-fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .corruption-bracket {
+    color: #888;
+    font-weight: bold;
+  }
+  
+  body.estado-falciforme .corruption-bracket {
+    color: #ff6666;
+  }
+  
+  body.estado-imperfeita .corruption-bracket {
+    color: #1a3a0a;
+  }
+  
+  body.estado-down .corruption-bracket {
+    color: #d4a574;
+  }
+  
+  .corruption-error {
+    color: #ff4444;
+    font-weight: bold;
+    animation: error-pulse 1s ease-in-out infinite;
+  }
+  
+  body.estado-falciforme .corruption-error {
+    color: #ff6666;
+  }
+  
+  body.estado-imperfeita .corruption-error {
+    color: #ff4444;
+  }
+  
+  body.estado-down .corruption-error {
+    color: #ff6666;
+  }
+  
+  @keyframes error-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  
+  .corruption-code {
+    color: #00ff00;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  body.estado-falciforme .corruption-code {
+    color: #ff9999;
+  }
+  
+  body.estado-imperfeita .corruption-code {
+    color: #66ff66;
+  }
+  
+  body.estado-down .corruption-code {
+    color: #ffcc99;
+  }
+  
+  @keyframes corruption-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
+  }
+  
+  @keyframes scan-lines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+  }
+  
+  @keyframes glitch-shift {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(2px); }
+  }
+  
+  @keyframes diagonal-shift {
+    0% { transform: skewX(0deg); }
+    50% { transform: skewX(0.5deg); }
+    100% { transform: skewX(0deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .corruption-code-container {
+      padding: 1rem;
+      font-size: 0.75rem;
+    }
+    
+    .corruption-line {
+      gap: 0.3rem;
+    }
+  }

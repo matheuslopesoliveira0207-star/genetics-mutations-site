@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { mutations, mutationOrder } from "@/data/mutations";
 import { Button } from "@/components/ui/button";
 import { GlossaryTooltip } from "@/components/GlossaryTooltip";
+import { CorruptionCode } from "@/components/CorruptionCode";
 
 export default function Home() {
   const [currentState, setCurrentState] = useState<string>("nativo");
@@ -317,6 +318,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Exibição de Corrupção para Mutações Ruins */}
+      {(currentState === "falciforme" || currentState === "imperfeita" || currentState === "down") && (
+        <div className="corruption-display-wrapper mt-8 md:mt-12">
+          <CorruptionCode mutationType={currentState as "falciforme" | "imperfeita" | "down"} />
+        </div>
+      )}
 
       {/* Rodapé com Informações */}
       <footer className="mt-8 md:mt-12 py-6 md:py-8 px-3 md:px-4 text-center text-xs text-muted-foreground border-t border-border">
