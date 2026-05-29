@@ -120,13 +120,24 @@ export default function Home() {
 
           {/* Gráfico Cinético Simplificado */}
           <div className="bg-muted/20 p-3 md:p-4 rounded-md">
-            <div className="text-xs font-bold mb-3">Solubilidade / Eficiência</div>
+            <div className="text-xs font-bold mb-3">
+              {currentState === "nativo"
+                ? "Solubilidade / Eficiência"
+                : currentState === "falciforme"
+                  ? "Nível de Agregação"
+                  : currentState === "imperfeita"
+                    ? "Integridade Estrutural"
+                    : currentState === "down"
+                      ? "Estresse Oxidativo (H₂O₂)"
+                      : "Eficiência de Remoção de Colesterol"}
+            </div>
             <div className="flex items-end gap-2 h-24">
               {[1, 2, 3, 4, 5].map((i) => {
                 let height = 0;
                 if (currentState === "nativo") height = 80 - i * 5;
                 else if (currentState === "falciforme") height = 20 + i * 3;
                 else if (currentState === "imperfeita") height = 30 + i * 8;
+                else if (currentState === "down") height = 30 + i * 12;
                 else if (currentState === "milano") height = 70 + i * 4;
 
                 return (
@@ -138,14 +149,29 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className="text-xs text-muted-foreground mt-2">
-              {currentState === "nativo"
-                ? "Alta solubilidade"
-                : currentState === "falciforme"
-                  ? "Agregação severa"
-                  : currentState === "imperfeita"
-                    ? "Estrutura comprometida"
-                    : "Ultra-eficiente"}
+            <div className="text-xs text-muted-foreground mt-3 p-2 bg-background/50 rounded">
+              <div className="font-semibold mb-1">
+                {currentState === "nativo"
+                  ? "✅ Estado Nativo"
+                  : currentState === "falciforme"
+                    ? "❌ Anemia Falciforme"
+                    : currentState === "imperfeita"
+                      ? "⚠️ Osteogênese Imperfeita"
+                      : currentState === "down"
+                        ? "⚡ Síndrome de Down"
+                        : "✨ ApoA-1 Milano"}
+              </div>
+              <div className="text-xs leading-relaxed">
+                {currentState === "nativo"
+                  ? "Proteína totalmente solúvel e funcional. Todas as interações estão em perfeito equilíbrio termodinâmico."
+                  : currentState === "falciforme"
+                    ? "Agregação massiva de hemoglobinas. A Valína hidrofóbica causa polimerização irreversível."
+                    : currentState === "imperfeita"
+                      ? "Colágeno com hélice tríplice quebrada. O impedimento estérico impede o enovelamento correto."
+                      : currentState === "down"
+                        ? "Sobreprodução de H₂O₂ pela SOD1 em excesso. Catalase e Glutationa Peroxidase não conseguem neutralizar a tempo."
+                        : "Partícula HDL ultra-estável. Pontes de dissulfeto maximizam a eficiência na remoção de colesterol."}
+              </div>
             </div>
           </div>
 
