@@ -143,7 +143,7 @@ export default function Home() {
                 return (
                   <div
                     key={i}
-                    className="flex-1 bg-accent rounded-t transition-all duration-700"
+                    className="flex-1 bg-accent rounded-t chart-bar"
                     style={{ height: `${height}%` }}
                   ></div>
                 );
