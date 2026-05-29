@@ -237,6 +237,37 @@
     --card-foreground: #ffffff;
     --accent: #ff6666;
     background: linear-gradient(135deg, #1a0a0a 0%, #330000 100%);
+    animation: corruption-flicker 0.15s ease-in-out infinite;
+    position: relative;
+  }
+  
+  body.estado-falciforme::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 102, 102, 0.03),
+      rgba(255, 102, 102, 0.03) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    pointer-events: none;
+    z-index: 999;
+    animation: scan-lines 0.1s linear infinite;
+  }
+  
+  @keyframes corruption-flicker {
+    0%, 100% { filter: brightness(1) contrast(1); }
+    50% { filter: brightness(0.98) contrast(1.02); }
+  }
+  
+  @keyframes scan-lines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
   }
   
   body.estado-falciforme .main-container {
@@ -298,6 +329,38 @@
     --card-foreground: #1a1a1a;
     --accent: #1a3a0a;
     background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
+    animation: corruption-glitch 0.2s ease-in-out infinite;
+    position: relative;
+  }
+  
+  body.estado-imperfeita::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(26, 58, 10, 0.02),
+      rgba(26, 58, 10, 0.02) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    pointer-events: none;
+    z-index: 999;
+    animation: glitch-lines 0.15s ease-in-out infinite;
+  }
+  
+  @keyframes corruption-glitch {
+    0%, 100% { filter: brightness(1) hue-rotate(0deg); }
+    50% { filter: brightness(1.02) hue-rotate(2deg); }
+  }
+  
+  @keyframes glitch-lines {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
   }
   
   body.estado-imperfeita .main-container {
@@ -412,6 +475,38 @@
     --card-foreground: #3d3d3d;
     --accent: #d4a574;
     background: linear-gradient(135deg, #f5f0e8 0%, #ffe8cc 50%, #f5f0e8 100%);
+    animation: corruption-distort 0.25s ease-in-out infinite;
+    position: relative;
+  }
+  
+  body.estado-down::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(212, 165, 116, 0.02),
+      rgba(212, 165, 116, 0.02) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    pointer-events: none;
+    z-index: 999;
+    animation: distort-lines 0.2s ease-in-out infinite;
+  }
+  
+  @keyframes corruption-distort {
+    0%, 100% { filter: brightness(1) blur(0px); }
+    50% { filter: brightness(0.99) blur(0.5px); }
+  }
+  
+  @keyframes distort-lines {
+    0% { transform: skewX(0deg); }
+    50% { transform: skewX(1deg); }
+    100% { transform: skewX(0deg); }
   }
   
   body.estado-down .main-container {
