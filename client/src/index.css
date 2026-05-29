@@ -204,6 +204,22 @@
     opacity: 1;
   }
   
+  @media (max-width: 1024px) {
+    body.estado-nativo .main-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body.estado-nativo .main-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1.5rem 1rem 52vh 1rem;
+    }
+  }
+  
   body.estado-nativo .section-card {
     transform: translateY(0) rotate(0deg) skewY(0deg);
     opacity: 1;
@@ -226,6 +242,13 @@
     padding: 1rem 0.5rem;
     transform: scaleX(0.85) scaleY(1.1);
     opacity: 0.95;
+  }
+  
+  @media (max-width: 768px) {
+    body.estado-falciforme .main-container {
+      padding: 1rem 0.5rem 52vh 0.5rem;
+      transform: scaleX(0.95) scaleY(1.05);
+    }
   }
   
   body.estado-falciforme .section-card {
@@ -256,6 +279,23 @@
     padding: 2rem 1rem;
     transform: perspective(1000px) rotateX(2deg) rotateY(-1deg);
     opacity: 1;
+  }
+  
+  @media (max-width: 1024px) {
+    body.estado-imperfeita .main-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      padding: 1.5rem 0.75rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body.estado-imperfeita .main-container {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      padding: 1rem 0.5rem 52vh 0.5rem;
+      transform: perspective(1000px) rotateX(1deg) rotateY(0deg);
+    }
   }
   
   body.estado-imperfeita .section-card {
@@ -293,6 +333,24 @@
     opacity: 1;
   }
   
+  @media (max-width: 1024px) {
+    body.estado-milano .main-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2.5rem 1.5rem;
+      transform: scale(1.02) rotate(0deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body.estado-milano .main-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem 1rem 52vh 1rem;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
   body.estado-milano .section-card {
     transform: translateY(0) rotate(0deg) skewY(0deg);
     opacity: 1;
@@ -324,6 +382,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
+  @media (max-width: 768px) {
+    .section-card {
+      padding: 1.5rem 1rem;
+      border-radius: 0.4rem;
+    }
+  }
+  
   body.estado-falciforme .section-card {
     box-shadow: 0 8px 16px rgba(139, 0, 0, 0.3);
   }
@@ -349,6 +414,33 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.6s ease-out;
+    width: 280px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 1024px) {
+    .control-panel {
+      right: 1rem;
+      width: 240px;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .control-panel {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: auto;
+      transform: none;
+      border-radius: 1.5rem 1.5rem 0 0;
+      width: 100%;
+      max-height: 50vh;
+      padding: 1rem;
+      box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+    }
   }
   
   body.estado-falciforme .control-panel {
@@ -356,14 +448,32 @@
     box-shadow: 0 8px 32px rgba(139, 0, 0, 0.3);
   }
   
+  @media (max-width: 768px) {
+    body.estado-falciforme .control-panel {
+      box-shadow: 0 -8px 32px rgba(139, 0, 0, 0.3);
+    }
+  }
+  
   body.estado-imperfeita .control-panel {
     background: rgba(232, 232, 224, 0.95);
     box-shadow: 0 8px 32px rgba(45, 80, 22, 0.2);
   }
   
+  @media (max-width: 768px) {
+    body.estado-imperfeita .control-panel {
+      box-shadow: 0 -8px 32px rgba(45, 80, 22, 0.2);
+    }
+  }
+  
   body.estado-milano .control-panel {
     background: rgba(26, 31, 58, 0.95);
     box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    body.estado-milano .control-panel {
+      box-shadow: 0 -8px 32px rgba(255, 215, 0, 0.2);
+    }
   }
   
   .control-button {
@@ -424,16 +534,40 @@
     @apply text-4xl font-bold tracking-tight;
   }
   
+  @media (max-width: 768px) {
+    h1 {
+      @apply text-2xl;
+    }
+  }
+  
   h2 {
     @apply text-3xl font-bold tracking-tight;
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      @apply text-xl;
+    }
   }
   
   h3 {
     @apply text-2xl font-semibold tracking-tight;
   }
   
+  @media (max-width: 768px) {
+    h3 {
+      @apply text-lg;
+    }
+  }
+  
   p {
     @apply text-base leading-relaxed;
+  }
+  
+  @media (max-width: 768px) {
+    p {
+      @apply text-sm;
+    }
   }
   
   code {

@@ -35,8 +35,8 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground transition-all duration-800">
       {/* Painel de Controle Molecular */}
       <div className="control-panel">
-        <h3 className="text-lg font-bold mb-4 text-center">
-          Painel de Controle Molecular
+        <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4 text-center">
+          Painel de Controle
         </h3>
 
         <Button
@@ -49,7 +49,7 @@ export default function Home() {
 
         <div className="border-t border-current my-3 opacity-30"></div>
 
-        <p className="text-xs font-semibold mb-2 opacity-70">Seletores Manuais:</p>
+        <p className="text-xs font-semibold mb-2 opacity-70 hidden md:block">Seletores Manuais:</p>
 
         {mutationOrder.map((mutationId) => (
           <button
@@ -72,7 +72,7 @@ export default function Home() {
           <p className="text-sm leading-relaxed mb-4">{mutation.section1Content}</p>
 
           {/* Imagem da Proteína */}
-          <div className="mb-4 rounded-lg overflow-hidden">
+          <div className="mb-3 md:mb-4 rounded-lg overflow-hidden">
             <img
               src={mutation.imageUrl}
               alt={mutation.name}
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
 
           {/* Visualização de Sequência */}
-          <div className="bg-muted/30 p-3 rounded-md font-mono text-xs">
+          <div className="bg-muted/30 p-2 md:p-3 rounded-md font-mono text-xs">
             <div className="mb-2">
               <span className="font-bold">DNA:</span> {currentState === "nativo" ? "GAG" : currentState === "falciforme" ? "GTG" : currentState === "imperfeita" ? "GG(X)Y→CG(X)Y" : "CGC→TGC"}
             </div>
@@ -108,7 +108,7 @@ export default function Home() {
           <p className="text-sm leading-relaxed mb-6">{mutation.section2Content}</p>
 
           {/* Gráfico Cinético Simplificado */}
-          <div className="bg-muted/20 p-4 rounded-md">
+          <div className="bg-muted/20 p-3 md:p-4 rounded-md">
             <div className="text-xs font-bold mb-3">Solubilidade / Eficiência</div>
             <div className="flex items-end gap-2 h-24">
               {[1, 2, 3, 4, 5].map((i) => {
@@ -139,15 +139,15 @@ export default function Home() {
           </div>
 
           {/* Indicadores Bioquímicos */}
-          <div className="grid grid-cols-2 gap-2 mt-4">
-            <div className="bg-muted/20 p-2 rounded text-xs">
-              <div className="font-bold">pH Ótimo</div>
+          <div className="grid grid-cols-2 gap-2 mt-3 md:mt-4">
+            <div className="bg-muted/20 p-2 rounded text-xs md:text-sm">
+              <div className="font-bold text-xs">pH Ótimo</div>
               <div className="text-muted-foreground">
                 {currentState === "nativo" ? "7.4" : currentState === "falciforme" ? "6.8" : currentState === "imperfeita" ? "7.2" : "7.4"}
               </div>
             </div>
-            <div className="bg-muted/20 p-2 rounded text-xs">
-              <div className="font-bold">Estabilidade</div>
+            <div className="bg-muted/20 p-2 rounded text-xs md:text-sm">
+              <div className="font-bold text-xs">Estabilidade</div>
               <div className="text-muted-foreground">
                 {currentState === "nativo" ? "Alta" : currentState === "falciforme" ? "Baixa" : currentState === "imperfeita" ? "Crítica" : "Máxima"}
               </div>
@@ -202,7 +202,7 @@ export default function Home() {
           )}
 
           {/* Dica Educativa */}
-          <div className="mt-4 p-3 bg-muted/30 rounded-md text-xs text-muted-foreground">
+          <div className="mt-3 md:mt-4 p-2 md:p-3 bg-muted/30 rounded-md text-xs text-muted-foreground">
             <strong>Conceito-chave:</strong> {
               currentState === "nativo"
                 ? "O estado nativo é determinado pela minimização da energia livre de Gibbs."
@@ -217,15 +217,15 @@ export default function Home() {
       </div>
 
       {/* Rodapé com Informações */}
-      <footer className="mt-12 py-8 px-4 text-center text-xs text-muted-foreground border-t border-border">
-        <p className="mb-2 font-bold text-sm">
-          💡 Conceito Central: "Estrutura dita Função"
+      <footer className="mt-8 md:mt-12 py-6 md:py-8 px-3 md:px-4 text-center text-xs text-muted-foreground border-t border-border">
+        <p className="mb-2 font-bold text-xs md:text-sm">
+          💡 "Estrutura dita Função"
         </p>
-        <p className="mb-3">
-          Seminário de Bioquímica 1 - Mutações e Doenças Genéticas
+        <p className="mb-2 md:mb-3 text-xs">
+          Bioquímica 1 - Mutações Genéticas
         </p>
-        <p className="text-xs opacity-70">
-          Desenvolvido com React 19 + Tailwind CSS 4 | Biomorfismo Dinâmico
+        <p className="text-xs opacity-70 hidden md:block">
+          React 19 + Tailwind CSS 4 | Biomorfismo Dinâmico
         </p>
       </footer>
     </div>
