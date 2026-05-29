@@ -26,7 +26,7 @@ export const mutations: Record<string, MutationState> = {
     section2Content:
       "Interações fracas (pontes de hidrogênio e interações eletrostáticas) perfeitamente distribuídas. Alta solubilidade e afinidade ideal pelo oxigênio.",
     imageUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-nativo-JCkvirxRuSQdsbo5ZiyETa.webp?alt=Hemoglobina%20Nativa%20em%20Homeostase",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-nativo-pt-jEhvAiYdo9ssrZaas8uHQb.webp",
     quizQuestion:
       "Em condições normais de homeostase celular, qual fator garante que a proteína atinja seu estado nativo estável?",
     quizOptions: [
@@ -51,7 +51,7 @@ export const mutations: Record<string, MutationState> = {
     section2Content:
       "A Valina mutada exposta tenta fugir do meio aquoso, encaixando-se em um bolsão hidrofóbico de outra hemoglobina vizinha. Isso gera polimerização em massa, criando fibras rígidas que deformam a hemácia em forma de foice e colapsam a solubilidade.",
     imageUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-falciforme-NRs23j6WoYbMggbnA5FBNc.webp?alt=Hemoglobinas%20Polimerizadas%20em%20Anemia%20Falciforme",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-falciforme-pt-SBbvyvzRVY2XZQtcesvgBv.webp",
     quizQuestion:
       "Bioquimicamente, qual força termodinâmica impulsiona a agregação das hemoglobinas na Anemia Falciforme?",
     quizOptions: [
@@ -76,7 +76,7 @@ export const mutations: Record<string, MutationState> = {
     section2Content:
       "A Glicina é o menor aminoácido existente (sua cadeia lateral é apenas um Hidrogênio), permitindo o aperto da hélice tríplice do colágeno. O novo aminoácido volumoso não cabe no interior da hélice, impedindo o enovelamento e destruindo as pontes de hidrogênio estruturais.",
     imageUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-imperfeita-7EvcRezNAXEzE5KLLzfG5r.webp?alt=Colágeno%20Defeituoso%20em%20Osteogênese%20Imperfeita",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-imperfeita-pt-NYXUeMvnmt4uZyFXoVqTHt.webp",
     quizQuestion:
       "Por que a substituição da Glicina por outro aminoácido destrói a hélice tríplice do colágeno?",
     quizOptions: [
@@ -101,7 +101,7 @@ export const mutations: Record<string, MutationState> = {
     section2Content:
       "A introdução da Cisteína introduz um grupo tiol (-SH), permitindo a formação de ligações covalentes fortes (pontes de dissulfeto) entre as proteínas mutadas. Isso gera dímeros ultra-estáveis e altamente eficientes na remoção de placas de colesterol das artérias.",
     imageUrl:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-milano-5nHUNZAQ2bJ8NniXNZRphj.webp?alt=Partícula%20HDL%20ApoA-1%20Milano%20Otimizada",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/estado-milano-pt-TgrrectLWbjuEbkYuHKwVT.webp",
     quizQuestion:
       "Qual modificação química estabiliza a variante ApoA-1 Milano na estrutura quaternária?",
     quizOptions: [
