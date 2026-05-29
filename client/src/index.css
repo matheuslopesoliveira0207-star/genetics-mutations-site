@@ -189,9 +189,10 @@
   /* Estado Nativo (Homeostase) */
   body.estado-nativo {
     --background: #ffffff;
-    --foreground: #1a1a2e;
+    --foreground: #0a0a1a;
     --card: #f5f9ff;
-    --accent: #00d4ff;
+    --card-foreground: #0a0a1a;
+    --accent: #0066cc;
     background: linear-gradient(135deg, #ffffff 0%, #f0f5ff 100%);
   }
   
@@ -229,9 +230,10 @@
   /* Estado Falciforme (Compressão/Congestão) */
   body.estado-falciforme {
     --background: #1a0a0a;
-    --foreground: #ffcccc;
+    --foreground: #ffffff;
     --card: #330000;
-    --accent: #8B0000;
+    --card-foreground: #ffffff;
+    --accent: #ff6666;
     background: linear-gradient(135deg, #1a0a0a 0%, #330000 100%);
   }
   
@@ -268,7 +270,8 @@
     --background: #f5f5f0;
     --foreground: #1a1a1a;
     --card: #e8e8e0;
-    --accent: #2D5016;
+    --card-foreground: #1a1a1a;
+    --accent: #1a3a0a;
     background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e0 100%);
   }
   
@@ -320,6 +323,7 @@
     --background: #0a0e1a;
     --foreground: #ffffff;
     --card: #1a1f3a;
+    --card-foreground: #ffffff;
     --accent: #ffd700;
     background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 50%, #0a0e1a 100%);
   }
@@ -391,14 +395,17 @@
   
   body.estado-falciforme .section-card {
     box-shadow: 0 8px 16px rgba(139, 0, 0, 0.3);
+    background: #2a0a0a;
   }
   
   body.estado-imperfeita .section-card {
     box-shadow: 0 4px 8px rgba(45, 80, 22, 0.2);
+    background: #f0f0e8;
   }
   
   body.estado-milano .section-card {
     box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+    background: #151a2e;
   }
   
   /* Painel de Controle */
@@ -444,8 +451,17 @@
   }
   
   body.estado-falciforme .control-panel {
-    background: rgba(51, 0, 0, 0.95);
+    background: rgba(26, 0, 0, 0.98);
     box-shadow: 0 8px 32px rgba(139, 0, 0, 0.3);
+    color: #ffffff;
+  }
+  
+  body.estado-falciforme .control-panel h3 {
+    color: #ffffff;
+  }
+  
+  body.estado-falciforme .control-panel p {
+    color: #ffcccc;
   }
   
   @media (max-width: 768px) {
@@ -455,8 +471,17 @@
   }
   
   body.estado-imperfeita .control-panel {
-    background: rgba(232, 232, 224, 0.95);
+    background: rgba(240, 240, 232, 0.98);
     box-shadow: 0 8px 32px rgba(45, 80, 22, 0.2);
+    color: #1a1a1a;
+  }
+  
+  body.estado-imperfeita .control-panel h3 {
+    color: #1a1a1a;
+  }
+  
+  body.estado-imperfeita .control-panel p {
+    color: #333333;
   }
   
   @media (max-width: 768px) {
@@ -466,8 +491,17 @@
   }
   
   body.estado-milano .control-panel {
-    background: rgba(26, 31, 58, 0.95);
+    background: rgba(10, 14, 26, 0.98);
     box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+    color: #ffffff;
+  }
+  
+  body.estado-milano .control-panel h3 {
+    color: #ffd700;
+  }
+  
+  body.estado-milano .control-panel p {
+    color: #00d4ff;
   }
   
   @media (max-width: 768px) {
@@ -503,6 +537,42 @@
     box-shadow: 0 0 12px var(--accent);
   }
   
+  body.estado-falciforme .control-button {
+    border-color: #ff6666;
+    color: #ff6666;
+  }
+  
+  body.estado-falciforme .control-button:hover,
+  body.estado-falciforme .control-button.active {
+    background: #ff6666;
+    color: #ffffff;
+    box-shadow: 0 0 12px #ff6666;
+  }
+  
+  body.estado-imperfeita .control-button {
+    border-color: #1a3a0a;
+    color: #1a3a0a;
+  }
+  
+  body.estado-imperfeita .control-button:hover,
+  body.estado-imperfeita .control-button.active {
+    background: #1a3a0a;
+    color: #ffffff;
+    box-shadow: 0 0 12px #1a3a0a;
+  }
+  
+  body.estado-milano .control-button {
+    border-color: #ffd700;
+    color: #ffd700;
+  }
+  
+  body.estado-milano .control-button:hover,
+  body.estado-milano .control-button.active {
+    background: #ffd700;
+    color: #0a0e1a;
+    box-shadow: 0 0 12px #ffd700;
+  }
+  
   .chaos-button {
     width: 100%;
     padding: 1rem;
@@ -525,6 +595,21 @@
   
   .chaos-button:active {
     transform: scale(0.98);
+  }
+  
+  body.estado-falciforme .chaos-button {
+    background: #ff6666;
+    color: #ffffff;
+  }
+  
+  body.estado-imperfeita .chaos-button {
+    background: #1a3a0a;
+    color: #ffffff;
+  }
+  
+  body.estado-milano .chaos-button {
+    background: #ffd700;
+    color: #0a0e1a;
   }
 }
 
