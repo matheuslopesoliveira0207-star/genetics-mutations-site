@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { mutations, mutationOrder } from "@/data/mutations";
 import { Button } from "@/components/ui/button";
+import { GlossaryTooltip } from "@/components/GlossaryTooltip";
 
 export default function Home() {
   const [currentState, setCurrentState] = useState<string>("nativo");
@@ -89,7 +90,29 @@ export default function Home() {
         {/* Seção 1: Introdução e Dogma Central */}
         <div className="section-card">
           <h2 className="text-2xl font-bold mb-4">{mutation.section1Title}</h2>
-          <p className="text-sm leading-relaxed mb-4">{mutation.section1Content}</p>
+          <p className="text-sm leading-relaxed mb-4">
+            {currentState === "nativo" ? (
+              <>
+                Sequência normal: GAG codificando Ácido Glutâmico na posição 6 da cadeia beta da <GlossaryTooltip termKey="hemoglobina">hemoglobina</GlossaryTooltip>. Proteína enovelada corretamente em seu estado nativo.
+              </>
+            ) : currentState === "falciforme" ? (
+              <>
+                <GlossaryTooltip termKey="mutacao-ponto">Mutação de Ponto</GlossaryTooltip>: GAG -&gt; GTG. Substituição do Glutamato (polar, carregado negativamente) por Valina (apolar, hidrofóbica) na posição 6 da beta-globina (Glu6Val).
+              </>
+            ) : currentState === "imperfeita" ? (
+              <>
+                <GlossaryTooltip termKey="mutacao-ponto">Mutação Estrutural</GlossaryTooltip>: Substituição da Glicina (Gly) por um aminoácido volumoso com cadeia lateral complexa (como Cisteína ou Triptofano) no padrão de repetição Gly-X-Y do <GlossaryTooltip termKey="colageno">colágeno</GlossaryTooltip>.
+              </>
+            ) : currentState === "down" ? (
+              <>
+                <GlossaryTooltip termKey="trissomia">Alteração Cromossômica</GlossaryTooltip>: <GlossaryTooltip termKey="trissomia">Trissomia do Cromossomo 21</GlossaryTooltip>. Em vez de uma mutação pontual, ocorre um fenômeno de desequilíbrio de dosagem génica, onde a presença de uma terceira cópia do cromossomo decola a superexpressão de dezenas de proteínas e enzimas.
+              </>
+            ) : (
+              <>
+                <GlossaryTooltip termKey="mutacao-ponto">Mutação Adaptativa</GlossaryTooltip>: Substituição de uma Arginina por uma Cisteína na posição 173 (Arg173Cys) na proteína <GlossaryTooltip termKey="apoa1-milano">ApoA-1 Milano</GlossaryTooltip>.
+              </>
+            )}
+          </p>
 
           {/* Imagem da Proteína */}
           <div className="mb-3 md:mb-4 rounded-lg overflow-hidden">
@@ -136,7 +159,29 @@ export default function Home() {
         {/* Seção 2: Impacto Bioquímico */}
         <div className="section-card">
           <h2 className="text-2xl font-bold mb-4">{mutation.section2Title}</h2>
-          <p className="text-sm leading-relaxed mb-6">{mutation.section2Content}</p>
+          <p className="text-sm leading-relaxed mb-6">
+            {currentState === "nativo" ? (
+              <>
+                Interações fracas (<GlossaryTooltip termKey="pontes-hidrogenio">pontes de hidrogênio</GlossaryTooltip> e interações eletrostáticas) perfeitamente distribuídas. Alta <GlossaryTooltip termKey="solubilidade">solubilidade</GlossaryTooltip> e <GlossaryTooltip termKey="afinidade-oxigenio">afinidade ideal pelo oxígênio</GlossaryTooltip>.
+              </>
+            ) : currentState === "falciforme" ? (
+              <>
+                A Valina mutada exposta tenta fugir do meio aquoso, encaixando-se em um bolção <GlossaryTooltip termKey="efeito-hidrofobico">hidrofóbico</GlossaryTooltip> de outra hemoglobina vizinha. Isso gera polimerizção em massa, criando fibras rígidas que deformam a hemácia em forma de foice e colapsam a <GlossaryTooltip termKey="solubilidade">solubilidade</GlossaryTooltip>.
+              </>
+            ) : currentState === "imperfeita" ? (
+              <>
+                O <GlossaryTooltip termKey="impedimento-esterico">impedimento estérico</GlossaryTooltip> causado pela substituição de Glicina por aminoácidos volumosos quebra a <GlossaryTooltip termKey="helix-triplice">hélice tríplice</GlossaryTooltip> do colágeno. Sem a estrutura de suporte, ossos ficam frágeis e quebradiços.
+              </>
+            ) : currentState === "down" ? (
+              <>
+                Quebra do <GlossaryTooltip termKey="estresse-oxidativo">equilíbrio redox</GlossaryTooltip>: O cromossomo 21 abriga o gene da enzima <GlossaryTooltip termKey="sod1">SOD1</GlossaryTooltip>. Com 50% mais enzima SOD1 ativa, ocorre uma superpodução de <GlossaryTooltip termKey="h2o2">peróxido de hidrogênio</GlossaryTooltip>. Isso sobrecarrega as enzimas <GlossaryTooltip termKey="catalase">Catalase</GlossaryTooltip> e <GlossaryTooltip termKey="glutationa-peroxidase">Glutationa Peroxidase</GlossaryTooltip>, gerando <GlossaryTooltip termKey="estresse-oxidativo">estresse oxidativo</GlossaryTooltip> severo que danifica lipídios de membrana e desnatura proteínas celulares.
+              </>
+            ) : (
+              <>
+                A introdução da Cisteína introduz um grupo tiol (-SH), permitindo a formação de ligações covalentes fortes (<GlossaryTooltip termKey="ponte-dissulfeto">pontes de dissulfeto</GlossaryTooltip>) entre as proteínas mutadas. Isso gera dímeros ultra-estáveis e altamente eficientes na remoção de placas de colesterol das artérias.
+              </>
+            )}
+          </p>
 
           {/* Gráfico Cinético Simplificado */}
           <div className="bg-muted/20 p-3 md:p-4 rounded-md">

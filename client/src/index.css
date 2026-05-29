@@ -1032,3 +1032,138 @@
     @apply text-sm font-mono bg-muted px-2 py-1 rounded;
   }
 }
+
+  /* Glossário Interativo - Tooltips */
+  .glossary-term {
+    position: relative;
+    border-bottom: 1.5px dotted var(--accent);
+    cursor: help;
+    transition: all 0.2s ease-out;
+    font-weight: 500;
+  }
+  
+  .glossary-term:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom-color: var(--accent);
+  }
+  
+  .glossary-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    border: 1.5px solid var(--accent);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    width: 280px;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: tooltipFadeIn 0.2s ease-out;
+    pointer-events: none;
+  }
+  
+  @keyframes tooltipFadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  .glossary-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--accent);
+  }
+  
+  .glossary-tooltip-title {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .glossary-tooltip-definition {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--foreground);
+    opacity: 0.95;
+  }
+  
+  body.estado-falciforme .glossary-tooltip {
+    border-color: #ff6666;
+    background: rgba(255, 102, 102, 0.1);
+  }
+  
+  body.estado-falciforme .glossary-tooltip-title {
+    color: #ff6666;
+  }
+  
+  body.estado-falciforme .glossary-tooltip::after {
+    border-top-color: #ff6666;
+  }
+  
+  body.estado-imperfeita .glossary-tooltip {
+    border-color: #1a3a0a;
+    background: rgba(26, 58, 10, 0.1);
+  }
+  
+  body.estado-imperfeita .glossary-tooltip-title {
+    color: #1a3a0a;
+  }
+  
+  body.estado-imperfeita .glossary-tooltip::after {
+    border-top-color: #1a3a0a;
+  }
+  
+  body.estado-down .glossary-tooltip {
+    border-color: #d4a574;
+    background: rgba(212, 165, 116, 0.1);
+  }
+  
+  body.estado-down .glossary-tooltip-title {
+    color: #d4a574;
+  }
+  
+  body.estado-down .glossary-tooltip::after {
+    border-top-color: #d4a574;
+  }
+  
+  body.estado-milano .glossary-tooltip {
+    border-color: #ffd700;
+    background: rgba(255, 215, 0, 0.1);
+  }
+  
+  body.estado-milano .glossary-tooltip-title {
+    color: #ffd700;
+  }
+  
+  body.estado-milano .glossary-tooltip::after {
+    border-top-color: #ffd700;
+  }
+  
+  @media (max-width: 768px) {
+    .glossary-tooltip {
+      width: 240px;
+      padding: 0.6rem 0.8rem;
+      font-size: 0.75rem;
+    }
+    
+    .glossary-tooltip-title {
+      font-size: 0.8rem;
+    }
+    
+    .glossary-tooltip-definition {
+      font-size: 0.75rem;
+    }
+  }
