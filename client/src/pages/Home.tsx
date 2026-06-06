@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { GlossaryTooltip } from "@/components/GlossaryTooltip";
 import { CorruptionCode } from "@/components/CorruptionCode";
 import { TerminalTypewriter } from "@/components/TerminalTypewriter";
+import { Link } from "wouter";
 
 export default function Home() {
   const [currentState, setCurrentState] = useState<string>("nativo");
@@ -39,6 +40,13 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 md:py-12">
         {/* Cabeçalho */}
         <div className="text-center mb-8 md:mb-12">
+          <div className="flex justify-center mb-4">
+            <Link href="/referencias">
+              <Button variant="outline" className="text-xs md:text-sm">
+                📚 Referências Bibliográficas
+              </Button>
+            </Link>
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
             🧬 Mutações Genéticas
           </h1>
