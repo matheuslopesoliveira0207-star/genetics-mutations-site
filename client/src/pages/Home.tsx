@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { GlossaryTooltip } from "@/components/GlossaryTooltip";
 import { CorruptionCode } from "@/components/CorruptionCode";
 import { TerminalTypewriter } from "@/components/TerminalTypewriter";
+import { CitationLink } from "@/components/CitationLink";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -83,6 +84,10 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-4">{displayedMutation.section1Title}</h2>
             <p className="text-sm leading-relaxed mb-6">
               {displayedMutation.section1Content}
+              {displayedState === "nativo" && <CitationLink referenceId="nativo-2" />}
+              {displayedState === "falciforme" && <CitationLink referenceId="falciforme-1" />}
+              {displayedState === "imperfeita" && <CitationLink referenceId="imperfeita-1" />}
+              {displayedState === "down" && <CitationLink referenceId="down-1" />}
             </p>
 
             {/* Imagem Científica */}
@@ -126,11 +131,11 @@ export default function Home() {
               <p className="text-sm leading-relaxed mb-6">
                 {displayedState === "nativo" ? (
                   <>
-                    Interações fracas (<GlossaryTooltip termKey="pontes-hidrogenio">pontes de hidrogênio</GlossaryTooltip> e interações eletrostáticas) perfeitamente distribuídas. Alta <GlossaryTooltip termKey="solubilidade">solubilidade</GlossaryTooltip> e <GlossaryTooltip termKey="afinidade-oxigenio">afinidade ideal pelo oxígênio</GlossaryTooltip>.
+                    Interações fracas (<GlossaryTooltip termKey="pontes-hidrogenio">pontes de hidrogênio</GlossaryTooltip> e interações eletrostáticas) perfeitamente distribuídas. Alta <GlossaryTooltip termKey="solubilidade">solubilidade</GlossaryTooltip> e <GlossaryTooltip termKey="afinidade-oxigenio">afinidade ideal pelo oxígênio</GlossaryTooltip>.<CitationLink referenceId="nativo-1" />
                   </>
                 ) : (
                   <>
-                    A introdução da Cisteína introduz um grupo tiol (-SH), permitindo a formação de ligações covalentes fortes (<GlossaryTooltip termKey="ponte-dissulfeto">pontes de dissulfeto</GlossaryTooltip>) entre as proteínas mutadas. Isso gera dímeros ultra-estáveis e altamente eficientes na remoção de placas de colesterol das artérias.
+                    A introdução da Cisteína introduz um grupo tiol (-SH), permitindo a formação de ligações covalentes fortes (<GlossaryTooltip termKey="ponte-dissulfeto">pontes de dissulfeto</GlossaryTooltip>) entre as proteínas mutadas. Isso gera dímeros ultra-estáveis e altamente eficientes na remoção de placas de colesterol das artérias.<CitationLink referenceId="milano-1" />
                   </>
                 )}
               </p>

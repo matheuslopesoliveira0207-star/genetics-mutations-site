@@ -1520,3 +1520,23 @@
       font-size: 0.8rem;
     }
   }
+
+
+/* Citation Links and Reference Highlighting */
+.citation-link {
+  @apply inline-flex items-center justify-center w-5 h-5 ml-1 text-xs font-bold rounded-full bg-accent text-accent-foreground hover:opacity-80 transition-opacity cursor-pointer align-text-top;
+}
+
+.citation-link:hover {
+  @apply scale-110 shadow-lg;
+}
+
+/* Highlight effect for referenced items */
+.highlight {
+  @apply ring-2 ring-accent bg-accent/10 transition-all duration-500;
+}
+
+.highlight::after {
+  content: "";
+  @apply absolute -inset-1 bg-accent/20 rounded-lg -z-10 blur-sm;
+}

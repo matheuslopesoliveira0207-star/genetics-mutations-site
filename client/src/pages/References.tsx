@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { references, getReferencesByMutation } from "@/data/references";
 import { mutationOrder, mutations } from "@/data/mutations";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export default function References() {
   const [selectedMutation, setSelectedMutation] = useState<string | null>(null);
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          element.classList.add("highlight");
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const displayedReferences = selectedMutation
     ? getReferencesByMutation(selectedMutation)
@@ -68,7 +82,8 @@ export default function References() {
               {displayedReferences.map((ref, index) => (
                 <div
                   key={ref.id}
-                  className="p-4 md:p-6 border-2 border-border rounded-lg hover:border-accent transition-colors bg-card/50"
+                  id={ref.id}
+                  className="p-4 md:p-6 border-2 border-border rounded-lg hover:border-accent transition-colors bg-card/50 scroll-mt-20 highlight:ring-2 highlight:ring-accent highlight:bg-accent/10"
                 >
                   {/* Número e Mutação */}
                   <div className="flex items-start justify-between mb-3">
