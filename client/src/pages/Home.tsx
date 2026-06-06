@@ -151,6 +151,11 @@ export default function Home() {
                   }
                   speed={25}
                 />
+                <div className="mt-2">
+                  {displayedState === "falciforme" && <CitationLink referenceId="falciforme-2" />}
+                  {displayedState === "imperfeita" && <CitationLink referenceId="imperfeita-2" />}
+                  {displayedState === "down" && <CitationLink referenceId="down-2" />}
+                </div>
               </div>
             )}
 
@@ -263,6 +268,11 @@ export default function Home() {
                           ? "O equilíbrio redox é mais importante que a quantidade absoluta de antioxidantes."
                           : "As ligações covalentes são muito mais estáveis que interações fracas."
                 }
+                {displayedState === "nativo" && <CitationLink referenceId="nativo-3" />}
+                {displayedState === "falciforme" && <CitationLink referenceId="falciforme-3" />}
+                {displayedState === "imperfeita" && <CitationLink referenceId="imperfeita-3" />}
+                {displayedState === "down" && <CitationLink referenceId="down-3" />}
+                {displayedState === "milano" && <CitationLink referenceId="milano-2" />}
               </p>
             </div>
           </div>
