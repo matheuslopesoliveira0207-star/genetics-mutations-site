@@ -1022,6 +1022,27 @@
                 filter 0.6s ease-out;
     transform-origin: bottom;
     animation: bar-pulse 2s ease-in-out infinite;
+    background-color: #0066cc;
+  }
+  
+  .estado-nativo .chart-bar {
+    background-color: #0066cc;
+  }
+  
+  .estado-falciforme .chart-bar {
+    background-color: #ff6666;
+  }
+  
+  .estado-imperfeita .chart-bar {
+    background-color: #1a3a0a;
+  }
+  
+  .estado-down .chart-bar {
+    background-color: #d4a574;
+  }
+  
+  .estado-milano .chart-bar {
+    background-color: #ffd700;
   }
   
   .chart-bar:nth-child(1) {

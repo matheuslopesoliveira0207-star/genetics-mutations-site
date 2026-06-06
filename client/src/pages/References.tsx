@@ -22,7 +22,7 @@ export default function References() {
   }, [location]);
 
   const displayedReferences = selectedMutation
-    ? getReferencesByMutation(selectedMutation)
+    ? getReferencesByMutation(selectedMutation as "nativo" | "falciforme" | "imperfeita" | "down" | "milano")
     : references;
 
   return (

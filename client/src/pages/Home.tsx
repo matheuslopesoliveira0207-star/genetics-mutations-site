@@ -37,8 +37,9 @@ export default function Home() {
   const displayedMutation = mutations[displayedState];
 
   return (
-    <div className={`min-h-screen transition-all duration-700 estado-${displayedState}`}>
-      <div className="container mx-auto px-4 py-8 md:py-12">
+    <div className={`min-h-screen transition-all duration-700`} style={{ backgroundColor: displayedState === 'nativo' ? '#ffffff' : displayedState === 'falciforme' ? '#1a0a0a' : displayedState === 'imperfeita' ? '#f5f5f0' : displayedState === 'down' ? '#2a1a1a' : '#151a2e', color: displayedState === 'nativo' ? '#0a0a1a' : '#ffffff' }}>
+      <style>{`body { --estado-atual: ${displayedState}; }`}</style>
+      <div className={`container mx-auto px-4 py-8 md:py-12 estado-${displayedState}`}>
         {/* Cabeçalho */}
         <div className="text-center mb-8 md:mb-12">
           <div className="flex justify-center mb-4">
