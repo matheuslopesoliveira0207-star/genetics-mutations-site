@@ -1436,3 +1436,87 @@
       gap: 0.3rem;
     }
   }
+
+
+  /* Componente TerminalTypewriter - Efeito de Digitação */
+  .terminal-text-wrapper {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.02) 100%);
+    border-left: 3px solid var(--accent);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    min-height: 80px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  body.estado-falciforme .terminal-text-wrapper {
+    border-left-color: #ff6666;
+    background: linear-gradient(135deg, rgba(255, 102, 102, 0.05) 0%, rgba(255, 102, 102, 0.02) 100%);
+  }
+
+  body.estado-imperfeita .terminal-text-wrapper {
+    border-left-color: #1a3a0a;
+    background: linear-gradient(135deg, rgba(26, 58, 10, 0.05) 0%, rgba(26, 58, 10, 0.02) 100%);
+  }
+
+  body.estado-down .terminal-text-wrapper {
+    border-left-color: #d4a574;
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.05) 0%, rgba(212, 165, 116, 0.02) 100%);
+  }
+
+  .terminal-typewriter {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--foreground);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .typewriter-text {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  .typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    margin-left: 2px;
+    background-color: var(--accent);
+    animation: cursor-blink 1s ease-in-out infinite;
+    vertical-align: text-bottom;
+  }
+
+  body.estado-falciforme .typewriter-cursor {
+    background-color: #ff6666;
+  }
+
+  body.estado-imperfeita .typewriter-cursor {
+    background-color: #1a3a0a;
+  }
+
+  body.estado-down .typewriter-cursor {
+    background-color: #d4a574;
+  }
+
+  @keyframes cursor-blink {
+    0%, 49% {
+      opacity: 1;
+    }
+    50%, 100% {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .terminal-text-wrapper {
+      padding: 0.75rem;
+      font-size: 0.8rem;
+      min-height: 70px;
+    }
+
+    .terminal-typewriter {
+      font-size: 0.8rem;
+    }
+  }
