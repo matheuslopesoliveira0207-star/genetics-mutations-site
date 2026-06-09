@@ -668,15 +668,19 @@
   body.estado-down .control-panel {
     background: rgba(212, 165, 116, 0.98);
     border-color: #d4a574;
-    color: #3d3d3d;
+    color: #3d3d3d !important;
   }
   
   body.estado-down .control-panel h3 {
-    color: #3d3d3d;
+    color: #3d3d3d !important;
   }
   
   body.estado-down .control-panel p {
-    color: #333333;
+    color: #333333 !important;
+  }
+  
+  body.estado-down .control-panel span {
+    color: #3d3d3d !important;
   }
   
   body.estado-down .chaos-button {
@@ -777,15 +781,19 @@
   body.estado-falciforme .control-panel {
     background: rgba(26, 0, 0, 0.98);
     box-shadow: 0 8px 32px rgba(139, 0, 0, 0.3);
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
   body.estado-falciforme .control-panel h3 {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
   body.estado-falciforme .control-panel p {
-    color: #ffcccc;
+    color: #ffcccc !important;
+  }
+  
+  body.estado-falciforme .control-panel span {
+    color: #ffffff !important;
   }
   
   @media (max-width: 768px) {
@@ -797,15 +805,19 @@
   body.estado-imperfeita .control-panel {
     background: rgba(240, 240, 232, 0.98);
     box-shadow: 0 8px 32px rgba(45, 80, 22, 0.2);
-    color: #1a1a1a;
+    color: #1a1a1a !important;
   }
   
   body.estado-imperfeita .control-panel h3 {
-    color: #1a1a1a;
+    color: #1a1a1a !important;
   }
   
   body.estado-imperfeita .control-panel p {
-    color: #333333;
+    color: #333333 !important;
+  }
+  
+  body.estado-imperfeita .control-panel span {
+    color: #1a1a1a !important;
   }
   
   @media (max-width: 768px) {
@@ -817,15 +829,19 @@
   body.estado-milano .control-panel {
     background: rgba(10, 14, 26, 0.98);
     box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
   body.estado-milano .control-panel h3 {
-    color: #ffd700;
+    color: #ffd700 !important;
   }
   
   body.estado-milano .control-panel p {
-    color: #00d4ff;
+    color: #00d4ff !important;
+  }
+  
+  body.estado-milano .control-panel span {
+    color: #ffffff !important;
   }
   
   @media (max-width: 768px) {
@@ -920,21 +936,41 @@
   body.estado-falciforme .comparison-explanation {
     background: rgba(255, 102, 102, 0.1);
     border-left-color: #ff6666 !important;
+    color: #ffffff !important;
+  }
+  
+  body.estado-falciforme .comparison-explanation p {
+    color: #ffffff !important;
   }
   
   body.estado-imperfeita .comparison-explanation {
     background: rgba(26, 58, 10, 0.1);
     border-left-color: #1a3a0a !important;
+    color: #1a1a1a !important;
+  }
+  
+  body.estado-imperfeita .comparison-explanation p {
+    color: #1a1a1a !important;
   }
   
   body.estado-down .comparison-explanation {
     background: rgba(212, 165, 116, 0.1);
     border-left-color: #d4a574 !important;
+    color: #3d3d3d !important;
+  }
+  
+  body.estado-down .comparison-explanation p {
+    color: #3d3d3d !important;
   }
   
   body.estado-milano .comparison-explanation {
     background: rgba(255, 215, 0, 0.1);
     border-left-color: #ffd700 !important;
+    color: #ffffff !important;
+  }
+  
+  body.estado-milano .comparison-explanation p {
+    color: #ffffff !important;
   }
   
   .control-button {
