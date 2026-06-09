@@ -228,6 +228,13 @@
     background: linear-gradient(135deg, #f5f9ff 0%, #e8f4ff 100%);
     border-color: #0066cc;
     box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+    color: #0a0a1a;
+  }
+  
+  body.estado-nativo .section-card h2,
+  body.estado-nativo .section-card h3,
+  body.estado-nativo .section-card p {
+    color: #0a0a1a;
   }
   
   /* Estado Falciforme (Compressão/Congestão) */
@@ -240,6 +247,12 @@
     background: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/bg-falciforme-947XQwgCqYYzdjFf8Z9CdW.webp') center/cover fixed, linear-gradient(135deg, #1a0a0a 0%, #4d0000 35%, #800000 70%, #330000 100%);
     animation: corruption-flicker 0.15s ease-in-out infinite;
     position: relative;
+    color: #ffffff;
+  }
+  
+  body.estado-falciforme h1, body.estado-falciforme h2, body.estado-falciforme h3,
+  body.estado-falciforme p, body.estado-falciforme span, body.estado-falciforme div {
+    color: #ffffff;
   }
   
   body.estado-falciforme::before {
@@ -333,6 +346,12 @@
     background: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/bg-imperfeita-nQ9VrMTgBT5ovvuv7QEJy3.webp') center/cover fixed, linear-gradient(135deg, #f5f5f0 0%, #e0e8d8 35%, #d0dcc8 70%, #c8d4b8 100%);
     animation: corruption-glitch 0.2s ease-in-out infinite;
     position: relative;
+    color: #1a1a1a;
+  }
+  
+  body.estado-imperfeita h1, body.estado-imperfeita h2, body.estado-imperfeita h3,
+  body.estado-imperfeita p, body.estado-imperfeita span, body.estado-imperfeita div {
+    color: #1a1a1a;
   }
   
   body.estado-imperfeita::before {
@@ -419,6 +438,12 @@
     --card-foreground: #ffffff;
     --accent: #ffd700;
     background: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/bg-milano-n7gCa27Hc8UyYmZBfMqWec.webp') center/cover fixed, linear-gradient(135deg, #0a0e1a 0%, #1a2d4d 25%, #2d4d7a 50%, #1a2d4d 75%, #0a0e1a 100%);
+    color: #ffffff;
+  }
+  
+  body.estado-milano h1, body.estado-milano h2, body.estado-milano h3,
+  body.estado-milano p, body.estado-milano span, body.estado-milano div {
+    color: #ffffff;
   }
   
   body.estado-milano .main-container {
@@ -481,6 +506,12 @@
     background: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/bg-down-FmkCoVk3UbBsCi9sYjiPoc.webp') center/cover fixed, linear-gradient(135deg, #f5f0e8 0%, #ffd9a3 25%, #ffe8cc 50%, #ffc266 75%, #f5f0e8 100%);
     animation: corruption-distort 0.25s ease-in-out infinite;
     position: relative;
+    color: #3d3d3d;
+  }
+  
+  body.estado-down h1, body.estado-down h2, body.estado-down h3,
+  body.estado-down p, body.estado-down span, body.estado-down div {
+    color: #3d3d3d;
   }
   
   body.estado-down::before {
