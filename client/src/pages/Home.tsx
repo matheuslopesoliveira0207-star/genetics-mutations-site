@@ -290,14 +290,14 @@ export default function Home() {
             ⚡ O Botão do Caos
           </Button>
 
-          <p className="text-xs font-semibold mb-2 opacity-70">Seletores Manuais:</p>
+          <p className="text-xs font-semibold mb-2 opacity-70" style={{color: '#000000'}}>Seletores Manuais:</p>
           <div className="space-y-2">
             {mutationOrder.map((state) => (
               <Button
                 key={state}
                 onClick={() => handleStateChange(state)}
                 variant={currentState === state ? "default" : "outline"}
-                className="w-full text-xs"
+                className="w-full text-xs" style={{color: '#000000'}}
               >
                 {mutations[state].label}
               </Button>
