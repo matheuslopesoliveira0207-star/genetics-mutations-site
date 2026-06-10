@@ -306,7 +306,7 @@ export default function Home() {
         </div>
 
         {/* Painel de Controle Molecular - Mobile */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t-2 border-border rounded-t-lg p-4 shadow-lg max-h-[50vh] overflow-y-auto">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t-2 border-border rounded-t-lg p-4 shadow-lg max-h-[50vh] overflow-y-auto control-panel">
           <h3 className="font-bold text-sm mb-3">Painel de Controle</h3>
           <Button
             onClick={handleChaosButton}
@@ -316,7 +316,7 @@ export default function Home() {
             ⚡ O Botão do Caos
           </Button>
 
-          <p className="text-xs font-semibold mb-2 opacity-70">Seletores Manuais:</p>
+          <p className="text-xs font-semibold mb-2 opacity-70" style={{color: '#000000'}}>Seletores Manuais:</p>
           <div className="grid grid-cols-2 gap-2">
             {mutationOrder.map((state) => (
               <Button
@@ -324,6 +324,7 @@ export default function Home() {
                 onClick={() => handleStateChange(state)}
                 variant={currentState === state ? "default" : "outline"}
                 className="w-full text-xs"
+                style={{color: '#000000'}}
               >
                 {mutations[state].label}
               </Button>
