@@ -68,7 +68,7 @@ export default function Home() {
             </Button>
             {mutations[currentState].comparisonExplanation && (
               <div className="comparison-explanation text-xs leading-relaxed opacity-80 mb-4 p-2 rounded border-l-2 border-current">
-                <p>
+                <p style={{color: '#ffffff'}}>
                   {mutations[currentState].comparisonExplanation}
                 </p>
               </div>
