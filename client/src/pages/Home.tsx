@@ -125,23 +125,25 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Seção 2: Impacto Bioquímico */}
+            {/* Seção 2: Impacto Bioquímico */}
           <div className="section-card">
             <h2 className="text-2xl font-bold mb-4">{displayedMutation.section2Title}</h2>
             {displayedState === "nativo" || displayedState === "milano" ? (
-              <p className="text-sm leading-relaxed mb-6">
+              <div className="text-sm leading-relaxed mb-6 space-y-3">
                 {displayedState === "nativo" ? (
                   <>
-                    Interações fracas (<GlossaryTooltip termKey="pontes-hidrogenio">pontes de hidrogênio</GlossaryTooltip> e interações eletrostáticas) perfeitamente distribuídas. Alta <GlossaryTooltip termKey="solubilidade">solubilidade</GlossaryTooltip> e <GlossaryTooltip termKey="afinidade-oxigenio">afinidade ideal pelo oxígênio</GlossaryTooltip>.<CitationLink referenceId="nativo-1" />
+                    <p>Interações fracas (<GlossaryTooltip termKey="pontes-hidrogenio">pontes de hidrogênio</GlossaryTooltip> e interações eletrostáticas) perfeitamente distribuídas. Alta <GlossaryTooltip termKey="solubilidade">solubilidade</GlossaryTooltip> e <GlossaryTooltip termKey="afinidade-oxigenio">afinidade ideal pelo oxígênio</GlossaryTooltip>.<CitationLink referenceId="nativo-1" /></p>
+                    <p className="text-xs bg-muted/30 p-2 rounded italic">A cooperatividade alostérica permite que a hemoglobina nativa se adapte dinamicamente às mudanças de pO₂, transportando oxigênio de forma eficiente dos pulmões para os tecidos. Este é um exemplo magistral de como a estrutura quaternária permite função biológica sofisticada.</p>
                   </>
                 ) : (
                   <>
-                    A introdução da Cisteína introduz um grupo tiol (-SH), permitindo a formação de ligações covalentes fortes (<GlossaryTooltip termKey="ponte-dissulfeto">pontes de dissulfeto</GlossaryTooltip>) entre as proteínas mutadas. Isso gera dímeros ultra-estáveis e altamente eficientes na remoção de placas de colesterol das artérias.<CitationLink referenceId="milano-1" />
+                    <p>A introdução da Cisteína introduz um grupo tiol (-SH), permitindo a formação de ligações covalentes fortes (<GlossaryTooltip termKey="ponte-dissulfeto">pontes de dissulfeto</GlossaryTooltip>) entre as proteínas mutadas. Isso gera dímeros ultra-estáveis e altamente eficientes na remoção de placas de colesterol das artérias.<CitationLink referenceId="milano-1" /></p>
+                    <p className="text-xs bg-muted/30 p-2 rounded italic">Estudos clínicos demonstram que uma única infusão de ApoA-1 Milano reduz a espessura de placas ateroscleróticas em 4% em apenas 6 semanas. A população de Limone sul Garda, apesar de níveis elevados de colesterol, apresenta incidência praticamente ZERO de doença cardiovascular.</p>
                   </>
                 )}
-              </p>
+              </div>
             ) : (
-              <div className="terminal-text-wrapper mb-6">
+              <div className="terminal-text-wrapper mb-6 space-y-3">
                 <TerminalTypewriter
                   text={
                     displayedState === "falciforme"
@@ -152,6 +154,14 @@ export default function Home() {
                   }
                   speed={25}
                 />
+                <p className="text-xs bg-muted/30 p-2 rounded italic">
+                  {displayedState === "falciforme"
+                    ? "A solubilidade cai de ~34 g/dL (nativa) para ~8 g/dL (falciforme) - uma redução de 75%. Em ambientes com pO₂ < 60 mmHg, a polimerização é acelerada, causando obstrução vascular, hemólise e dor severa."
+                    : displayedState === "imperfeita"
+                      ? "O colágeno defeituoso afeta não apenas ossos, mas também pele, tendões, ligamentos e até a esclera dos olhos (que fica azulada). A fragilidade é sistêmica."
+                      : "A reação de Fenton (H₂O₂ + Fe²⁺ → OH·) gera radicais hidroxila extremamente reativos que atacam lipídios de membrana, proteínas e DNA, causando morte celular massiva e inflamação crônica."
+                  }
+                </p>
                 <div className="mt-2">
                   {displayedState === "falciforme" && <CitationLink referenceId="falciforme-2" />}
                   {displayedState === "imperfeita" && <CitationLink referenceId="imperfeita-2" />}
@@ -332,9 +342,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Exibição de Corrupção para Mutações Ruins */}
+        {/* Exibição de Corrupção para Mutações Ruins - Destacada */}
         {(currentState === "falciforme" || currentState === "imperfeita" || currentState === "down") && (
-          <div className="corruption-display-wrapper mt-8 md:mt-12">
+          <div className="corruption-display-wrapper mt-8 md:mt-12 mb-8 md:mb-12 px-4 md:px-0 border-l-4 border-accent pl-4">
+            <div className="mb-4">
+              <h3 className="text-lg md:text-xl font-bold mb-2">⚠️ Diagnóstico de Erro Molecular</h3>
+              <p className="text-xs md:text-sm opacity-75 mb-4">
+                {currentState === "falciforme"
+                  ? "Códigos de erro detectados na estrutura da hemoglobina. O sistema de transporte de oxigênio está comprometido."
+                  : currentState === "imperfeita"
+                    ? "Falha crítica na matriz estrutural. A integridade do colágeno foi severamente comprometida."
+                    : "Alerta de estresse oxidativo crítico. O equilíbrio redox foi quebrado, causando dano celular em cascata."}
+              </p>
+            </div>
             <CorruptionCode mutationType={currentState as "falciforme" | "imperfeita" | "down"} />
           </div>
         )}
