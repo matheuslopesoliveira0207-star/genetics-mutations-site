@@ -346,7 +346,7 @@ export default function Home() {
         {(currentState === "falciforme" || currentState === "imperfeita" || currentState === "down") && (
           <div className="corruption-display-wrapper mt-8 md:mt-12 mb-8 md:mb-12 px-4 md:px-0 border-l-4 border-accent pl-4">
             <div className="mb-4">
-              <h3 className="text-lg md:text-xl font-bold mb-2">⚠️ Diagnóstico de Erro Molecular</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2" style={{color: '#990000'}}>⚠️ Diagnóstico de Erro Molecular</h3>
               <p className="text-xs md:text-sm opacity-75 mb-4">
                 {currentState === "falciforme"
                   ? "Códigos de erro detectados na estrutura da hemoglobina. O sistema de transporte de oxigênio está comprometido."
