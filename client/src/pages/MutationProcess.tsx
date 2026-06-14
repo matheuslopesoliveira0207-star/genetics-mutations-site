@@ -11,7 +11,7 @@ export default function MutationProcess() {
       description:
         "O DNA é composto por duas cadeias complementares que se enroscam uma na outra formando uma dupla hélice. Cada nucleotídeo é composto por um açúcar (desoxirribose), um grupo fosfato e uma base nitrogenada (A, T, G, ou C). As bases pareiam especificamente: Adenina com Timina (2 ligações de hidrogênio) e Guanina com Citosina (3 ligações de hidrogênio). Esta estrutura é extremamente estável e precisa.",
       imageUrl:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step1-dna-normal-CRbVo8Thspi9Ee3WcYAyvZ.webp",
+        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step1-dna-normal-pt-US499e3Gjz3kcaADMfCrYg.webp",
       keyPoints: [
         "Dupla hélice com estrutura de parafuso",
         "Bases pareadas por ligações de hidrogênio",
@@ -24,7 +24,7 @@ export default function MutationProcess() {
       description:
         "Uma mutação pontual ocorre quando um único nucleotídeo é substituído por outro. No caso da Anemia Falciforme, o nucleotídeo Adenina (A) é substituído por Timina (T) na posição 6 do gene da beta-globina. Isto muda o códon de GAG para GTG. Esta é uma mudança simples, mas com consequências devastadoras. A mutação pode ser causada por erro na replicação do DNA, radiação, ou exposição a agentes mutagênicos.",
       imageUrl:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step2-mutation-point-JGvV8SLyvtrKynCxbjHR6Y.webp",
+        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step2-mutation-point-pt-ULtYToN7uCXs9EfTtqrpvC.webp",
       keyPoints: [
         "Substituição de um único nucleotídeo",
         "Mudança de GAG para GTG",
@@ -37,7 +37,7 @@ export default function MutationProcess() {
       description:
         "Durante a transcrição, a enzima RNA polimerase lê a sequência de DNA e sintetiza uma molécula de mRNA complementar. O mRNA é uma cópia temporária do gene que será usada para síntese de proteína. A mutação no DNA é copiada para o mRNA: o códon GAG (normal) torna-se GAG no mRNA, mas o códon GTG (mutado) torna-se GUG no mRNA (note que o DNA usa Timina (T) e o RNA usa Uracila (U)). Este mRNA mutado carrega a informação errada para a próxima etapa.",
       imageUrl:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step3-transcription-A9UeuJ4PiwcoR35qESyiDN.webp",
+        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step3-transcription-pt-4Z6YLD8FMESuM2cu2d78cW.webp",
       keyPoints: [
         "RNA polimerase lê o DNA template",
         "Sintetiza mRNA complementar",
@@ -50,7 +50,7 @@ export default function MutationProcess() {
       description:
         "Durante a tradução, o ribossomo lê o mRNA em grupos de 3 nucleotídeos (códons). Cada códon é reconhecido por um tRNA específico que traz o amino ácido correspondente. No caso normal, o códon GAG é lido como Ácido Glutâmico (Glu), um amino ácido polar e carregado negativamente. No caso mutado, o códon GUG é lido como Valina (Val), um amino ácido apolar e hidrofóbico. Esta mudança de um único amino ácido em uma proteína de 146 amino ácidos tem consequências catastróficas.",
       imageUrl:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step4-translation-EHmARvcB3NuRt2Nyb7yhgs.webp",
+        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step4-translation-pt-dj6QUZTHL4dGV7AbjWYiSL.webp",
       keyPoints: [
         "Ribossomo lê mRNA em códons",
         "tRNA traz amino ácidos específicos",
@@ -63,7 +63,7 @@ export default function MutationProcess() {
       description:
         "A substituição de um único amino ácido altera dramaticamente a estrutura e função da proteína. O Glutamato é polar e carregado negativamente, permitindo interações eletrostáticas estáveis com o meio aquoso. A Valina é apolar e hidrofóbica, tendendo a se enterrar no interior da proteína. Na posição 6 da beta-globina, a Valina fica parcialmente exposta, criando um bolsão hidrofóbico anômalo. Este bolsão interage com bolsões hidrofóbicos de outras hemoglobinas vizinhas, causando agregação em cadeia, polimerização, deformação das células em forma de foice, e todos os sintomas clínicos da Anemia Falciforme.",
       imageUrl:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step5-protein-consequence-oYp9vMmXFFgooJeHNP5Xsb.webp",
+        "https://d2xsxph8kpxj0f.cloudfront.net/310519663631778992/jZfSn9AmDiR52C36GaK7rM/step5-protein-consequence-pt-STXqLDbH37cKG9U8K7nGXj.webp",
       keyPoints: [
         "Glutamato (polar) vs Valina (apolar)",
         "Valina cria bolsão hidrofóbico anômalo",
