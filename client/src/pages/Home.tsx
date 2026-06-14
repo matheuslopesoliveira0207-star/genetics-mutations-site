@@ -14,7 +14,9 @@ export default function Home() {
   const [comparisonMode, setComparisonMode] = useState(false);
 
   const mutation = mutations[currentState];
-  const isCorrect = quizAnswer === mutation.quizOptions.findIndex((opt) => opt.correct);
+  const displayedState = comparisonMode ? "nativo" : currentState;
+  const displayedMutation = mutations[displayedState];
+  const isCorrect = quizAnswer === displayedMutation.quizOptions.findIndex((opt) => opt.correct);
 
   const handleStateChange = (state: string) => {
     setCurrentState(state);
@@ -33,9 +35,6 @@ export default function Home() {
     setShowFeedback(true);
   };
 
-  const displayedState = comparisonMode ? "nativo" : currentState;
-  const displayedMutation = mutations[displayedState];
-
   return (
     <div className={`min-h-screen transition-all duration-700`} style={{ backgroundColor: displayedState === 'nativo' ? '#ffffff' : displayedState === 'falciforme' ? '#1a0a0a' : displayedState === 'imperfeita' ? '#f5f5f0' : displayedState === 'down' ? '#2a1a1a' : '#151a2e', color: displayedState === 'nativo' ? '#0a0a1a' : '#ffffff' }}>
       <style>{`body { --estado-atual: ${displayedState}; }`}</style>
@@ -46,6 +45,11 @@ export default function Home() {
             <Link href="/processo">
               <Button variant="outline" className="text-xs md:text-sm">
                 🧬 Processo Passo a Passo
+              </Button>
+            </Link>
+            <Link href="/protecao">
+              <Button variant="outline" className="text-xs md:text-sm">
+                🛡️ Proteção contra Mutações
               </Button>
             </Link>
             <Link href="/referencias">

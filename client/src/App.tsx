@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import References from "./pages/References";
 import MutationProcess from "./pages/MutationProcess";
+import DNAProtection from "./pages/DNAProtection";
 
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/referencias"} component={References} />
       <Route path={"/processo"} component={MutationProcess} />
+      <Route path={"/protecao"} component={DNAProtection} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
