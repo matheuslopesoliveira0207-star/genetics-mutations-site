@@ -42,7 +42,12 @@ export default function Home() {
       <div className={`container mx-auto px-4 py-8 md:py-12 estado-${displayedState}`}>
         {/* Cabeçalho */}
         <div className="text-center mb-8 md:mb-12">
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center gap-2 mb-4 flex-wrap">
+            <Link href="/processo">
+              <Button variant="outline" className="text-xs md:text-sm">
+                🧬 Processo Passo a Passo
+              </Button>
+            </Link>
             <Link href="/referencias">
               <Button variant="outline" className="text-xs md:text-sm">
                 📚 Referências Bibliográficas
