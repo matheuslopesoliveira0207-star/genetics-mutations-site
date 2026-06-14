@@ -121,3 +121,6 @@
 [2026-06-14T23:39:50.482Z] 11:39:50 PM [vite] server restarted.
 [2026-06-14T23:40:27.593Z] 11:40:27 PM [vite] vite.config.ts changed, restarting server...
 [2026-06-14T23:40:27.593Z] 11:40:27 PM [vite] (client) page reload index.html
+[2026-06-14T23:40:27.610Z] 11:40:27 PM [vite] server restarted.
+[2026-06-14T23:40:27.610Z] ➜  Local:   http://localhost:5173/
+[2026-06-14T23:40:27.610Z] ➜  Network: http://169.254.0.21:5173/
