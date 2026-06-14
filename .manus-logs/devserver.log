@@ -1,0 +1,123 @@
+[2026-06-06T01:32:50.533Z] Starting dev server with command: pnpm run dev
+[2026-06-06T01:32:52.778Z] > genetics-mutations-site@1.0.0 dev /home/ubuntu/genetics-mutations-site
+[2026-06-06T01:32:52.778Z] > vite --host
+[2026-06-06T01:32:53.347Z] VITE v7.1.9  ready in 521 ms
+[2026-06-06T01:32:53.348Z] ➜  Local:   http://localhost:3000/
+[2026-06-06T01:32:53.348Z] ➜  Network: http://169.254.0.21:3000/
+[2026-06-06T01:35:32.899Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-06-06T01:37:18.057Z] 1:37:18 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-06-06T01:37:26.484Z] 1:37:26 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T01:37:35.220Z] 1:37:35 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T01:37:46.574Z] 1:37:46 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-06-06T01:45:27.798Z] 1:45:27 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T01:45:55.890Z] 1:45:55 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T01:46:10.000Z] 1:46:10 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T01:46:32.787Z] 1:46:32 AM [vite] (client) hmr update /src/index.css, /src/pages/References.tsx
+[2026-06-06T01:46:44.903Z] 1:46:44 AM [vite] (client) hmr update /src/index.css, /src/pages/References.tsx
+[2026-06-06T01:46:50.555Z] 1:46:50 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T01:48:52.458Z] 1:48:52 AM [vite] (client) hmr update /src/components/CitationLink.tsx, /src/index.css
+[2026-06-06T01:49:06.915Z] 1:49:06 AM [vite] (client) hmr update /src/components/CitationLink.tsx, /src/index.css
+[2026-06-06T01:50:04.222Z] 1:50:04 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T01:50:43.344Z] 1:50:43 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T02:44:03.901Z] 2:44:03 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T02:44:12.601Z] 2:44:12 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-06T02:44:25.652Z] 2:44:25 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T02:44:51.535Z] 2:44:51 AM [vite] (client) hmr update /src/index.css, /src/pages/References.tsx
+[2026-06-06T02:45:00.875Z] 2:45:00 AM [vite] (client) hmr update /src/index.css, /src/pages/References.tsx
+[2026-06-06T02:49:17.428Z] 2:49:17 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T02:49:37.925Z] 2:49:37 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T02:49:49.605Z] 2:49:49 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T02:50:08.886Z] 2:50:08 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T03:00:30.752Z] 3:00:30 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T03:00:57.612Z] 3:00:57 AM [vite] (client) hmr update /src/index.css
+[2026-06-06T03:01:42.626Z] 3:01:42 AM [vite] (client) hmr update /src/index.css
+[2026-06-09T21:44:32.111Z] Starting dev server with command: pnpm run dev
+[2026-06-09T21:44:32.875Z] > genetics-mutations-site@1.0.0 dev /home/ubuntu/genetics-mutations-site
+[2026-06-09T21:44:32.875Z] > vite --host
+[2026-06-09T21:44:33.305Z] VITE v7.1.9  ready in 381 ms
+[2026-06-09T21:44:33.305Z] ➜  Local:   http://localhost:3000/
+[2026-06-09T21:44:33.305Z] ➜  Network: http://169.254.0.21:3000/
+[2026-06-09T21:44:34.336Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-06-09T21:50:51.505Z] 9:50:51 PM [vite] (client) hmr update /src/index.css
+[2026-06-09T21:51:05.781Z] 9:51:05 PM [vite] (client) hmr update /src/index.css
+[2026-06-09T21:51:15.750Z] ELIFECYCLE  Command failed.
+[2026-06-09T21:51:15.764Z] Dev server exited with code -1
+[2026-06-09T21:51:16.850Z] Starting dev server with command: pnpm run dev
+[2026-06-09T21:51:17.693Z] > genetics-mutations-site@1.0.0 dev /home/ubuntu/genetics-mutations-site
+[2026-06-09T21:51:17.693Z] > vite --host
+[2026-06-09T21:51:18.163Z] VITE v7.1.9  ready in 422 ms
+[2026-06-09T21:51:18.163Z] ➜  Local:   http://localhost:3000/
+[2026-06-09T21:51:18.164Z] ➜  Network: http://169.254.0.21:3000/
+[2026-06-09T21:51:19.123Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-06-10T16:35:50.939Z] Starting dev server with command: pnpm run dev
+[2026-06-10T16:35:51.790Z] > genetics-mutations-site@1.0.0 dev /home/ubuntu/genetics-mutations-site
+[2026-06-10T16:35:51.790Z] > vite --host
+[2026-06-10T16:35:52.264Z] VITE v7.1.9  ready in 421 ms
+[2026-06-10T16:35:52.264Z] ➜  Local:   http://localhost:3000/
+[2026-06-10T16:35:52.264Z] ➜  Network: http://169.254.0.21:3000/
+[2026-06-10T16:35:52.971Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-06-10T16:36:41.452Z] 4:36:41 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T16:36:41.836Z] 4:36:41 PM [vite] (client) warning: Duplicate key "color" in object literal
+[2026-06-10T16:36:41.836Z] 69 |              {mutations[currentState].comparisonExplanation &&
+[2026-06-10T16:36:41.836Z] 70 |            <div data-loc="client/src/pages/Home.tsx:70" className="comparison-explanation text-xs leading-relaxed opac...
+[2026-06-10T16:36:41.836Z] 71 |                  <p data-loc="client/src/pages/Home.tsx:71" style={{ color: '#00188f', color: '#00188f' }}>
+[2026-06-10T16:36:41.836Z] |                                                                                        ^
+[2026-06-10T16:36:41.836Z] 72 |                    {mutations[currentState].comparisonExplanation}
+[2026-06-10T16:36:41.836Z] 73 |                  </p>
+[2026-06-10T16:36:41.836Z] Plugin: vite:esbuild
+[2026-06-10T16:36:41.836Z] File: /home/ubuntu/genetics-mutations-site/client/src/pages/Home.tsx
+[2026-06-10T16:36:59.407Z] 4:36:59 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T16:39:43.688Z] 4:39:43 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T16:39:44.031Z] 4:39:44 PM [vite] (client) warning: Duplicate key "color" in object literal
+[2026-06-10T16:39:44.031Z] 69 |              {mutations[currentState].comparisonExplanation &&
+[2026-06-10T16:39:44.031Z] 70 |            <div data-loc="client/src/pages/Home.tsx:70" className="comparison-explanation text-xs leading-relaxed opac...
+[2026-06-10T16:39:44.031Z] 71 |                  <p data-loc="client/src/pages/Home.tsx:71" style={{ color: '#ffffff', color: '#ffffff' }}>
+[2026-06-10T16:39:44.031Z] |                                                                                        ^
+[2026-06-10T16:39:44.031Z] 72 |                    {mutations[currentState].comparisonExplanation}
+[2026-06-10T16:39:44.031Z] 73 |                  </p>
+[2026-06-10T16:39:44.031Z] Plugin: vite:esbuild
+[2026-06-10T16:39:44.031Z] File: /home/ubuntu/genetics-mutations-site/client/src/pages/Home.tsx
+[2026-06-10T16:39:44.031Z] 4:39:44 PM [vite] (client) warning: Duplicate "style" attribute in JSX element
+[2026-06-10T16:39:44.031Z] 236 |                      "border-red-500 bg-red-500" :
+[2026-06-10T16:39:44.031Z] 237 |                      "border-border"}`
+[2026-06-10T16:39:44.031Z] 238 |  ...                   } style={{ backgroundColor: '#ecb6b6' }} style={{ backgroundColor: '#ffbdbd' }} style={{ backgr...
+[2026-06-10T16:39:44.031Z] |                                                                 ^
+[2026-06-10T16:39:44.031Z] 239 |                    </div>
+[2026-06-10T16:39:44.031Z] 240 |                      <span data-loc="client/src/pages/Home.tsx:240">{option.text}</span>
+[2026-06-10T16:39:44.031Z] Plugin: vite:esbuild
+[2026-06-10T16:39:44.031Z] File: /home/ubuntu/genetics-mutations-site/client/src/pages/Home.tsx
+[2026-06-10T16:39:44.031Z] 4:39:44 PM [vite] (client) warning: Duplicate "style" attribute in JSX element
+[2026-06-10T16:39:44.031Z] 236 |                      "border-red-500 bg-red-500" :
+[2026-06-10T16:39:44.031Z] 237 |                      "border-border"}`
+[2026-06-10T16:39:44.031Z] 238 |  ...dColor: '#ecb6b6' }} style={{ backgroundColor: '#ffbdbd' }} style={{ backgroundColor: '#ffd1d1' }} style={{ backgr...
+[2026-06-10T16:39:44.032Z] |                                                                 ^
+[2026-06-10T16:39:44.032Z] 239 |                    </div>
+[2026-06-10T16:39:44.032Z] 240 |                      <span data-loc="client/src/pages/Home.tsx:240">{option.text}</span>
+[2026-06-10T16:39:44.032Z] Plugin: vite:esbuild
+[2026-06-10T16:39:44.032Z] File: /home/ubuntu/genetics-mutations-site/client/src/pages/Home.tsx
+[2026-06-10T16:39:44.032Z] 4:39:44 PM [vite] (client) warning: Duplicate "style" attribute in JSX element
+[2026-06-10T16:39:44.032Z] 236 |                      "border-red-500 bg-red-500" :
+[2026-06-10T16:39:44.032Z] 237 |                      "border-border"}`
+[2026-06-10T16:39:44.032Z] 238 |  ...dColor: '#ffbdbd' }} style={{ backgroundColor: '#ffd1d1' }} style={{ backgroundColor: '#ffc7c7' }}>
+[2026-06-10T16:39:44.032Z] |                                                                 ^
+[2026-06-10T16:39:44.032Z] 239 |                    </div>
+[2026-06-10T16:39:44.032Z] 240 |                      <span data-loc="client/src/pages/Home.tsx:240">{option.text}</span>
+[2026-06-10T16:39:44.032Z] Plugin: vite:esbuild
+[2026-06-10T16:39:44.032Z] File: /home/ubuntu/genetics-mutations-site/client/src/pages/Home.tsx
+[2026-06-10T16:40:00.815Z] 4:40:00 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T16:46:09.357Z] 4:46:09 PM [vite] (client) hmr update /src/index.css
+[2026-06-10T16:46:36.762Z] 4:46:36 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T17:04:13.866Z] 5:04:13 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T17:04:36.969Z] 5:04:36 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-10T17:12:25.055Z] 5:12:25 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-14T22:06:50.950Z] 10:06:50 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-06-14T22:07:03.891Z] 10:07:03 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-14T22:22:13.735Z] 10:22:13 PM [vite] (client) hmr update /src/pages/MutationProcess.tsx, /src/index.css
+[2026-06-14T22:43:23.608Z] 10:43:23 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-14T22:43:35.561Z] 10:43:35 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-14T22:44:26.534Z] 10:44:26 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-06-14T22:44:37.021Z] 10:44:37 PM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+[2026-06-14T23:39:50.427Z] 11:39:50 PM [vite] vite.config.ts changed, restarting server...
+[2026-06-14T23:39:50.482Z] 11:39:50 PM [vite] server restarted.
+[2026-06-14T23:40:27.593Z] 11:40:27 PM [vite] vite.config.ts changed, restarting server...
+[2026-06-14T23:40:27.593Z] 11:40:27 PM [vite] (client) page reload index.html
