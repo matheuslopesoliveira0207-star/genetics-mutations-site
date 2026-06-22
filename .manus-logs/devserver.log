@@ -1,0 +1,3 @@
+[2026-06-15T00:01:13.359Z] 12:01:13 AM [vite] (client) page reload index.html
+[2026-06-15T00:01:13.446Z] 12:01:13 AM [vite] changed tsconfig file detected: /home/ubuntu/genetics-mutations-site/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2026-06-15T00:01:13.448Z] 12:01:13 AM [vite] (client) page reload client/index.html
